@@ -1,77 +1,165 @@
-import React from 'react'
-import Image from 'next/image'
-// import Logo from '../../public/NTRlogo.png';
-// import NTRLogo.png present at /public/NTRLogo.png
-
+'use client'
+import { Fragment, useState, u } from 'react'
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { FaBars, FaWindowClose,FaAngleDown} from "react-icons/fa";
 import Link from "next/link";
 
-export default function header() {
-  return (
+function classNames(...classes) {
+return classes.filter(Boolean).join(' ')
+}
+
+export default function Example() {
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+return (
     <>
-    <header class=" w-full">
-    <nav class="bg-white border-gray-200 py-1.5">
-        <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-            <a href="#" class="flex items-center">
-        <img src="/NTRlogo.png" alt="NTR Logo" height={100} width={100} />
-            </a>
-            <div class="flex items-center lg:order-2">
-                <div class="hidden mt-2 mr-4 sm:inline-block">
-                    <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                    EN
-                        <svg class="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                          <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                        </svg>
-                      </button>
+    <nav className="bg-white mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:flex-1">
+        <a href="#">
+            <span className="sr-only">Nagarhole</span>
+            <img className="h-10 w-auto" src="/NTRlogo.png" alt="" />
+        </a>
+        </div>
+        <div className="flex lg:hidden">
+        <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(true)}
+        >
+            <span className="sr-only">Open main menu</span>
+            <FaBars className="h-6 w-6" aria-hidden="true" />
+        </button>
+        </div>
+        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+          <Link legacyBehavior href="/">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          About Us
+          </a>
+          </Link>
+          <Link legacyBehavior href="/news-events">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          News & Events
+          </a>
+          </Link>
+          <Link legacyBehavior href="/gallery">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          Gallery
+          </a>
+          </Link>
+          <Link legacyBehavior href="/projects-reports">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          Projects & Reports
+          </a>
+          </Link>
+          <Link legacyBehavior href="/donation">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          Donation
+          </a>
+          </Link>
+          <Link legacyBehavior href="/volunteer">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          Volunteer
+          </a>
+          </Link>
+          <Link legacyBehavior href="/contact-us">
+          <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900">
+          Contact Us
+          </a>
+          </Link>
+        </Popover.Group>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <Popover className="relative">
+            <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
+            <span>EN</span>
+            <FaAngleDown className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
+            </Popover.Button>
+                <Transition
+                as={Fragment}
+                enter="transition ease-out duration-200"
+                enterFrom="opacity-0 translate-y-1"
+                enterTo="opacity-100 translate-y-0"
+                leave="transition ease-in duration-150"
+                leaveFrom="opacity-100 translate-y-0"
+                leaveTo="opacity-0 translate-y-1"
+                >
+            <Popover.Panel className="absolute -left-2 top-full z-10 mt-3 max-w-xs overflow-hidden bg-white">
+                <div className="p-4 uppercase text-lg font-100 text-gray-900">
+                    KN
                 </div>
-                <a href="/" class="text-black bg-yellow-700 font-medium lg text-sm px-4 lg:px-5 py-2 lg:py-10 sm:mr-2 lg:mr-0 dark:bg-yellow-600">BOOKINGS</a>
-                <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </button>
-            </div>
-            <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
-                <li>
-                        <Link legacyBehavior href="/">
-                        <a href="" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">ABOUT US</a>
-                        </Link>
-                    </li>
-                    <li>
-                    <Link legacyBehavior href="/news-events">
-                        <a href="" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">NEWS&EVENTS</a>
-                    </Link>
-                    </li>
-                    <li>
-                        <Link legacyBehavior href="/gallery">
-                        <a href="" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">GALERY</a>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link legacyBehavior href="/projects-reports">
-                        <a href="/projects-reports" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">PROJECTS&REPORTS</a>
-                    </Link>
-                    </li>
-                    <li>
-                        <Link legacyBehavior href="/donation">
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">DONATIONS</a>
-                    </Link>
-                    </li>
-                    <li>
-                        <Link legacyBehavior href="/volunteer">
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">VOLUNTEER</a>
-                    </Link>
-                    </li>
-                    <li>
-                        <Link legacyBehavior href="/contact-us">    
-                        <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-yellow-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-black dark:hover:bg-gray-700 dark:hover:text-black lg:dark:hover:bg-transparent dark:border-gray-700">CONTACT US</a>
-                    </Link>
-                    </li>
-                </ul>
-            </div>
+              </Popover.Panel>
+            </Transition>
+          </Popover>
+        <div className="bg-yellow">
+        <a href="#" className="uppercase text-lg font-100 leading-6 text-gray-900 bg-yellow-600 py-5 px-2">
+          Bookings
+        </a>
+        </div>
         </div>
     </nav>
-    </header>
+    <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <div className="fixed inset-0 z-10" />
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <div className="flex items-center justify-between">
+            <a href="#" className="-m-1.5 p-1.5">
+              <span className="sr-only">Your Company</span>
+              <img
+                className="h-8 w-auto"
+                src="/NTRlogo.png"
+                alt=""
+            />
+            </a>
+            <button
+            type="button"
+            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Close menu</span>
+              <FaWindowClose className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <Disclosure as="div" className="-mx-3">
+                  {({ open }) => (
+                    <>
+                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                       KN
+                      </Disclosure.Button>
+                    </>
+                  )}
+                </Disclosure>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Features
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Marketplace
+                </a>
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Company
+                </a>
+              </div>
+              <div className="py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                >
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+        </Dialog.Panel>
+    </Dialog>
     </>
-  )
+)
 }

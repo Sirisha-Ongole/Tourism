@@ -1,6 +1,7 @@
 import './globals.css'
 import {whitney, inter} from './fonts';
-import Header from '../components/header'
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 
 
@@ -12,10 +13,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={whitney.className}>
+      <body>
+      <header className={`bg-white ${whitney.className}`}>
       <Header />
+      </header>
       {children}
       </body>
+      <footer className={whitney.className}>
+      <Footer  />
+      </footer>
     </html>
   )
 }
