@@ -4,23 +4,28 @@ import React from "react";
 
 export default function contactUS() {
   return (
-    <div className={`bg-white grid place-items-center ${whitney.className}`}>
+    <div className={`px-10 bg-white pt-16 grid place-items-center text-[#8D8282]`}>
       {contactUsData.map((data, index) => (
-        <div key={index} className="text-2xl  text-center text-black">
-          {data.contactHead}
+        <div key={index} className="text-lg  text-center ">
+          <h1
+            className={`${index !== 0 ? "text-left" : ""} text-3xl text-black tracking-tight font-extralight mt-6`}
+          >
+            {data.contactHead}
+          </h1>
+
           {data.mainContact && (
             <div className="grid place-items-center">
               <ContactCard contact={data.mainContact} />{" "}
             </div>
           )}
-          <div className="grid lg:grid-cols-3 grid-col-12 gap-4">
+          <div className="grid lg:grid-cols-2 grid-col-12 gap-4">
             {data.contacts &&
               data.contacts.map((contact, index) => (
                 <ContactCard
                   key={index}
                   contact={contact}
                   style={{
-                    holder: "text-left text-black my-5",
+                    holder: "text-left my-5 tracking-wide font-extralight",
                   }}
                 />
               ))}
@@ -128,6 +133,52 @@ const contactUsData = [
         designation: "Range Forest Officer",
         location: ["D.B.Kuppe Wildlife Range", "D.B.Kuppe", "H.D.Kote Taluk"],
         email: "dbkrfo@gmail.com",
+      },
+    ],
+  },
+  {
+    contactHead: "Kakanakote Safari Point",
+    contacts: [
+      {
+        name: "SRI. SIDDARAJU S.S.",
+        designation: "Range Forest Officer",
+      },
+
+      {
+        name: "SRI. SATISH",
+        designation: "Dy. Range Forest Officer cum Surveyor",
+        location: ["Ecotourism Antarasante Wildlife Range"],
+        phone: "+91-9481995138",
+      },
+    ],
+  },
+  {
+    contactHead: "Veeranahosahally Safari Point",
+    contacts: [
+      {
+        name: "SRI. GANARAJ PATAGAR",
+        designation: "Range Forest Officer",
+      },
+      {
+        name: "SRI. CHANDRESH D.S.",
+        designation: "Dy. Range Forest Officer cum Surveyor",
+        location: ["Ecotourism Veeranahosahally Wildlife Range"],
+        phone: "+91-9945419300",
+      },
+    ],
+  },
+  {
+    contactHead: "Nanachi Safari Point & Nagarahole Room",
+    contacts: [
+      {
+        name: "SRI. MUHAMMED ZEESHAN",
+        designation: "Range Forest Officer",
+      },
+      {
+        name: "SRI. NAVEEN ROWATH",
+        designation: "Dy. Range Forest Officer cum Surveyor",
+        location: ["Ecotourism Nagarahole Wildlife Range"],
+        phone: "+91-8105096096",
       },
     ],
   },

@@ -9,9 +9,9 @@ import React from "react";
  */
 export const ContactCard = ({ contact, style }) => {
   const defaultStyles = {
-    holder: "text-center text-black my-5",
-    name: "bg-zinc-100 uppercase m-2 p-4",
-    designation: "",
+    holder: holderDefaultStyle,
+    name: "text-center bg-zinc-100 uppercase m-2 p-6 font-light",
+    designation: "mt-6",
     location: "",
     phone: "",
     email: "",
@@ -51,3 +51,6 @@ export const ContactCard = ({ contact, style }) => {
     </>
   );
 };
+
+export const holderDefaultStyle =
+  "text-center my-5 tracking-wider font-extralight";
