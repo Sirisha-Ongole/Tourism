@@ -93,16 +93,16 @@ export default function FooterWithSocialMediaIcons() {
             Social
             </h5>
             <div className='flex space-x-3 mt-6'>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-4xl'>
+                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
                     <FaFacebookF />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-4xl'>
+                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
                     <FaTwitter />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-4xl'>
+                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
                     <FaYoutube />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-4xl'>
+                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
                     <FaInstagram />
                 </Button>
             </div>

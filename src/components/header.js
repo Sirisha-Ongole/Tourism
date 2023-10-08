@@ -4,9 +4,6 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
 import Link from "next/link";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
