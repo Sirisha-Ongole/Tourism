@@ -3,10 +3,8 @@ import { Fragment, useState, u } from 'react'
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import { FaBars, FaWindowClose,FaAngleDown} from "react-icons/fa";
 import Link from "next/link";
+import Carousel from '../components/carousel';
 
-function classNames(...classes) {
-return classes.filter(Boolean).join(' ')
-}
 
 export default function Example() {
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
