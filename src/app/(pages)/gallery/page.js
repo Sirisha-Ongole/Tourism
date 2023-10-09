@@ -1,7 +1,9 @@
 import React from 'react'
+import Carousel from '../../../components/carousel';
 
 export default function gallery() {
+  let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
   return (
-    <div>Wellcome to gallery</div>
+    <Carousel slideimages={slides}/>
   )
 }

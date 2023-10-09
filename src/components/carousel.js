@@ -1,9 +1,10 @@
 'use client';
 
 import { FaArrowLeft, FaArrowRight,FaDotCircle } from 'react-icons/fa';
-import { useState } from 'react';
+import { useState , useEffect} from 'react';
 
-export default function DefaultCarousel({ slideimages }) {
+export default function DefaultCarousel({ slideimages,  autoSlide = false, autoSlideInterval = 3000, }) {
+    
     const [currentSlide, setCurrentSlide] = useState(0);
     const prevSlide = () => {
         const isFirtsSlide = currentSlide === 0;
@@ -15,6 +16,13 @@ export default function DefaultCarousel({ slideimages }) {
         const newSlide = lastSlide ? 0 : currentSlide + 1;
         setCurrentSlide(newSlide);
     }
+
+    useEffect(() => {
+        if (!autoSlide) return
+        console.log('autoSlide', autoSlide);
+        const slideInterval = setInterval(nextSlide, autoSlideInterval)
+        return () => clearInterval(slideInterval)
+      }, [currentSlide])
 
     return (
         <>
