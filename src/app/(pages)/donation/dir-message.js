@@ -2,8 +2,8 @@ import React from "react";
 
 export const DirMessage = () => {
   return (
-    <div>
-      <div classname="text-slate-500">
+    <div className="font-thin text-[#656565] text-lg">
+      <p>
         Dear kind hearted donors, Nagarahole Tiger Reserve has been very
         fortunate in receiving aid and assistance from civil society at large
         whenever the need has arisen, you have raised to the occasion many a
@@ -17,10 +17,10 @@ export const DirMessage = () => {
         corpus fund of the Foundation that supports a host of activities and all
         donations are exempt from Income Tax under Section 805 of the Income Tax
         Act.
-      </div>
+      </p>
       <br />
       <br />
-      <p>
+      <p className="font-light">
         Deputy Conservator of Forests & Field Director, <br />
         Nagarahole Tiger Reserve, Hunsur
       </p>

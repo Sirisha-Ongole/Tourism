@@ -2,6 +2,8 @@ import { Tabs } from "@/components/Tabs";
 import React from "react";
 import { DirMessage } from "./dir-message";
 import Carousel from "@/components/carousel";
+import { HowDonate } from "./how-donate";
+import { Donors } from "./donors";
 
 export default function Donations() {
   let slides = [
@@ -27,10 +29,10 @@ export const donationTabs = [
   },
   {
     name: "How to Donate ?",
-    component: <div>How to Donate</div>,
+    component: <HowDonate />,
   },
   {
     name: "List of Donors",
-    component: <div>List of Donors</div>,
+    component: <Donors />,
   },
 ];
