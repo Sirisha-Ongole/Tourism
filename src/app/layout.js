@@ -1,7 +1,7 @@
 import './globals.css'
 import {whitney, inter} from './fonts';
-import Header from '../components/header';
-import Footer from '../components/footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 export const metadata = {
