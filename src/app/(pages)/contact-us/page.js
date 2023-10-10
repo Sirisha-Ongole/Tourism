@@ -3,6 +3,7 @@ import { whitney } from "../../fonts";
 import React from "react";
 
 export default function contactUS() {
+  let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
   return (
     <div className={`px-10 bg-white pt-16 grid place-items-center text-[#8D8282]`}>
       {contactUsData.map((data, index) => (

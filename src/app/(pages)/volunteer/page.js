@@ -1,9 +1,9 @@
  import Image from 'next/image'
-
-
+ import Carousel from '../../../components/carousel';
 
 export default function volunter() {
+  let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
   return (
-    <h2>Wellcome to Volunter</h2>
-     )
+    <Carousel slideimages={slides}/>
+  )
 }

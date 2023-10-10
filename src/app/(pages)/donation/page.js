@@ -3,6 +3,7 @@ import React from "react";
 import { DirMessage } from "./dir-message";
 
 export default function Donations() {
+  let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
   return (
     <div className="bg-white mx-auto w-3/4 px-12">
       <div>Welcome to Donations</div>
