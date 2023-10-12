@@ -19,7 +19,6 @@ export default function DefaultCarousel({ slideimages,  autoSlide = false, autoS
 
     useEffect(() => {
         if (!autoSlide) return
-        console.log('autoSlide', autoSlide);
         const slideInterval = setInterval(nextSlide, autoSlideInterval)
         return () => clearInterval(slideInterval)
       }, [currentSlide])
@@ -41,7 +40,7 @@ export default function DefaultCarousel({ slideimages,  autoSlide = false, autoS
                         {slideimages.map((slide, index) => {
                             return (
                                 <div key={index} onClick={() => setCurrentSlide(index)} className={`text-2xl cursor-pointer p-1`}>
-                                <FaDotCircle size={10}/>
+                                <FaDotCircle key={index} size={10}/>
                                 </div>
                             )
                         })}

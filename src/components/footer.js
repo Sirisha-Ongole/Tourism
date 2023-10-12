@@ -1,11 +1,18 @@
 'use client';
 
 import { Button, Footer } from 'flowbite-react';
+import Link from 'next/link';
 import {  FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 export default function FooterWithSocialMediaIcons() {
+    let socialIcon = {
+        style : "w-10 h-10 rounded-full bg-black text-center text-white text-4xl"
+    }
+    let liText = {
+        style : "text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out"
+    } 
   return (
-      <div className="mx-auto py-14 px-6">
+      <div className="mx-auto pb-14 px-6">
         <div className="border-t border-gray-300"></div>
         <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
           <div className="lg:col-span-3 col-span-12">
@@ -27,36 +34,15 @@ export default function FooterWithSocialMediaIcons() {
             Important Links
             </h5>
             <ul className="list-none mt-6 space-y-2">
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    About Us
-                    </a>
+                {navLink.map((item) => (
+                    <li>
+                        <Link legacyBehavior href={item.href} key={item.name}>
+                        <a href="#" className={`${liText.style}`}>
+                        {item.name}
+                            </a>
+                        </Link>
                 </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Booking
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    News & Events
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Gallery
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Project & Reports
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Contact Us
-                    </a>
-                </li>
+                ))}
             </ul>
         </div>
         <div className="lg:col-span-3 md:col-span-4 col-span-12">
@@ -64,26 +50,15 @@ export default function FooterWithSocialMediaIcons() {
             Other Links
             </h5>
             <ul className="list-none mt-6 space-y-2">
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Refund & Cancellation Policy
-                    </a>
+            {newLink.map((item) => (
+                    <li>
+                        <Link legacyBehavior href={item.href} key={item.name}>
+                        <a href="#" className={`${liText.style}`}>
+                        {item.name}
+                            </a>
+                        </Link>
                 </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Explore Nagarahole
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Do's and Don'ts
-                    </a>
-                </li>
-                <li>
-                    <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
-                    Rules & Regulations
-                    </a>
-                </li>
+                ))}
             </ul>
             <form action='#' className='mt-3'>
                 <input type="submit" className='py-2 px-5 traking-wide border duration-500 text-base textcenter bg-yellow-600 hover:bg-gray-300 text-white uppercase' value='Department Login' />
@@ -94,16 +69,16 @@ export default function FooterWithSocialMediaIcons() {
             Social
             </h5>
             <div className='flex space-x-3 mt-6'>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
+                <Button className={`${socialIcon.style}`}>
                     <FaFacebookF />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
+                <Button className={`${socialIcon.style}`}>
                     <FaTwitter />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
+                <Button className={`${socialIcon.style}`}>
                     <FaYoutube />
                 </Button>
-                <Button className='w-10 h-10 rounded-full bg-black text-center text-white text-xl'>
+                <Button className={`${socialIcon.style}`}>
                     <FaInstagram />
                 </Button>
             </div>
@@ -115,4 +90,53 @@ export default function FooterWithSocialMediaIcons() {
   )
 }
 
+const navLink = [
+    {
+      name: "About Us",
+      href: "/",
+    },
+    {
+      name: "News & Events",
+      href: "/news-events",
+    },
+    {
+      name: "Gallery",
+      href: "/gallery",
+    },
+    {
+      name: "Projects & Reports",
+      href: "/projects-reports",
+    },
+    {
+      name: "Donation",
+      href: "/donation",
+    },
+    {
+      name: "Volunteer",
+      href: "/volunteer",
+    },
+    {
+      name: "Contact Us",
+      href: "/contact-us",
+    },
+  ];
+const newLink = [
+    {
+      name: "Refund & Cancellation Policy",
+      href: "/refund-cancellation-policy",
+    },
+    {
+      name: "Explore Nagarahole",
+      href: "/explore-nagarahole",
+    },
+    {
+      name: "Do's and Don'ts",
+      href: "/dos-and-donts",
+    },
+    {
+      name: "Rules & Regulations",
+      href: "/rules-regulations",
+    },
+  ];
+  
 

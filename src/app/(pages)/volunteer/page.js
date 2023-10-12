@@ -2,10 +2,11 @@
  import Carousel from '../../../components/carousel';
  import {whitney, inter} from '../../fonts';
 
+
 export default function volunter() {
   let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
   let inputStyle = {
-    style: "placeholder:text-gray-400 block w-full border-b-2 border-gray-600 py-2 focus:outline-none focus:border-gray-500 focus:ring focus:ring-gray-100 text-xl sm:text-sm"
+    style: "bg-transparent placeholder:text-gray-500 block w-full border-b-2 border-gray-600 py-2 focus:outline-none focus:border-gray-500 focus:ring focus:ring-gray-200 text-sm lg:text-base font-sans"
   }
   return (
     <>
