@@ -6,7 +6,7 @@ import {  FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
 export default function FooterWithSocialMediaIcons() {
   return (
       <div className="mx-auto py-14 px-6 bg-white">
-        <div class="border-t border-gray-300"></div>
+        <div className="border-t border-gray-300"></div>
         <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
           <div className="lg:col-span-3 col-span-12">
             <a href="/">
@@ -26,7 +26,7 @@ export default function FooterWithSocialMediaIcons() {
             <h5 className='tracking-wide text-black-900 font-bold'>
             Important Links
             </h5>
-            <ul class="list-none mt-6 space-y-2">
+            <ul className="list-none mt-6 space-y-2">
                 <li>
                     <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
                     About Us
@@ -63,7 +63,7 @@ export default function FooterWithSocialMediaIcons() {
         <h5 className='tracking-wide text-black-900 font-bold'>
             Other Links
             </h5>
-            <ul class="list-none mt-6 space-y-2">
+            <ul className="list-none mt-6 space-y-2">
                 <li>
                     <a href="#" className='text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out'>
                     Refund & Cancellation Policy
@@ -109,7 +109,7 @@ export default function FooterWithSocialMediaIcons() {
             </div>
         </div>
         </div> 
-        <div class="border-t border-gray-300"></div>
+        <div className="border-t border-gray-300"></div>
       </div>
 
   )
