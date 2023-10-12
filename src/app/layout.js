@@ -11,16 +11,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className='bg-white bg-none text-black'>
-      <header className={`bg-white ${whitney.className}`}>
+    <html lang="en" >
+      <body className='bg-[#2424240D] bg-none text-black'>
+      <header className={`${whitney.className}`}>
       <Header />
       </header>
       {children}
-      </body>
-      <footer className={whitney.className}>
+      <footer className={`${whitney.className}`}>
       <Footer  />
       </footer>
+      </body>
     </html>
   )
 }

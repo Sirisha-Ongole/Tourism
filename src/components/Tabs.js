@@ -9,13 +9,13 @@ export const Tabs = ({ data }) => {
   const [activeTab, setActiveTab] = React.useState(0);
 
   return (
-    <div class="border-b border-gray-200 dark:border-gray-700  text-black">
-      <ul class="flex flex-wrap -mb-px text-xl font-medium text-center ">
+    <div className="border-b border-gray-200 dark:border-gray-700  text-black">
+      <ul className="flex flex-wrap -mb-px text-xl font-medium text-center ">
         {
           // Map through the tabs data
           data.map((tab, index) => (
             <li
-              class={`p-12 pb-4 mr-1 cursor-pointer ${
+              className={`p-12 pb-4 mr-1 cursor-pointer ${
                 // if active tab, show underline with animation from left to right
                 activeTab === index
                   ? "border-b-2 border-black transition-all duration-500 transform"
@@ -30,7 +30,7 @@ export const Tabs = ({ data }) => {
           ))
         }
       </ul>
-      <div class="py-10">
+      <div className="py-10">
         {
           // Show the selected tab component
           data[activeTab].component

@@ -5,7 +5,7 @@ import {  FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 export default function FooterWithSocialMediaIcons() {
   return (
-      <div className="mx-auto py-14 px-6 bg-white">
+      <div className="mx-auto py-14 px-6">
         <div className="border-t border-gray-300"></div>
         <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
           <div className="lg:col-span-3 col-span-12">
