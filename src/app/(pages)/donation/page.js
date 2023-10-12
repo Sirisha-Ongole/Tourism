@@ -14,7 +14,7 @@ export default function Donations() {
   return (
     <>
       <Carousel slideimages={slides} autoSlide={true} />
-      <div className="bg-white mx-auto w-3/4 px-12 mt-6">
+      <div className="bg-white mx-auto w-3/4 px-12 mt-6 bg-[#2424240D] ">
         <Tabs data={donationTabs} />
       </div>
     </>
