@@ -3,7 +3,7 @@
 import { FaArrowLeft, FaArrowRight,FaDotCircle } from 'react-icons/fa';
 import { useState , useEffect} from 'react';
 
-export default function DefaultCarousel({ slideimages,  autoSlide = false, autoSlideInterval = 3000, }) {
+export default function Carousel({ slideimages,  autoSlide = false, autoSlideInterval = 3000, }) {
     
     const [currentSlide, setCurrentSlide] = useState(0);
     const prevSlide = () => {

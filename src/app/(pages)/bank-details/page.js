@@ -1,7 +1,7 @@
 import { ContactCard } from "@/components/ContactCard";
 import { whitney } from "../../fonts";
 import React from "react";
-import DefaultCarousel from "@/components/carousel";
+import Carousel from "@/components/carousel";
 
 export default function BankDetails() {
   // Add carousel
@@ -13,7 +13,7 @@ export default function BankDetails() {
 
   return (
     <div>
-      <DefaultCarousel slideimages={slides} autoSlide={true} />
+      <Carousel slideimages={slides} autoSlide={true} />
       <div className="mx-auto w-2/3 ">
         <h3 className="my-6 font-medium">Bank Details</h3>
         {/* Show table with two columns and two rows */}
