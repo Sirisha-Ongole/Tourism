@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className={`${whitney.className} `}>
       <div className="overflow-hidden">
-        <div className="relative h-0 pb-[39.8571%]">
+        <div className="relative h-0 pb-[37.8571%]">
           <video
             className="w-full  object-initial -mb-24"
             autoPlay
