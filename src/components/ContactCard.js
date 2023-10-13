@@ -53,4 +53,4 @@ export const ContactCard = ({ contact, style }) => {
 };
 
 export const holderDefaultStyle =
-  "text-center my-5 tracking-wider font-extralight";
+  "text-center my-5 font-extralight";

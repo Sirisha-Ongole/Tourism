@@ -9,7 +9,7 @@ export default function contactUS() {
       {contactUsData.map((data, index) => (
         <div key={index} className="text-lg  text-center ">
           <h1
-            className={`${index !== 0 ? "text-left" : ""} text-3xl text-black tracking-tight font-extralight mt-6`}
+            className={`${index !== 0 ? "text-left" : ""} text-3xl text-black font-extralight mt-6`}
           >
             {data.contactHead}
           </h1>
@@ -26,7 +26,7 @@ export default function contactUS() {
                   key={index}
                   contact={contact}
                   style={{
-                    holder: "text-left my-5 tracking-wide font-extralight",
+                    holder: "text-left my-5 font-extralight",
                   }}
                 />
               ))}

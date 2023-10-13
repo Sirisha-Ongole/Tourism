@@ -31,7 +31,7 @@ export default function Home() {
           href="https://tickets.nagaraholetigerreserve.com/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center bg-black text-white rounded px-6 py-2 mx-auto mb-8 font-thin tracking-tight uppercase"
+          className="flex justify-center items-center bg-black text-white rounded px-6 py-2 mx-auto mb-8 font-thin uppercase"
         >
           <Link
             href="https://tickets.nagaraholetigerreserve.com/"
@@ -47,7 +47,7 @@ export default function Home() {
         <SectionTitle text="Welcome to Nagarahole" />
 
         {/* Grid with two columns and center border */}
-        <div className="grid grid-cols-2 gap-4 text-lg font-extralight tracking-normal text-center leading-8 mb-16">
+        <div className="grid grid-cols-2 gap-4 text-lg font-extralight text-center leading-8 mb-16">
           <p className="flex justify-center items-center border-r border-black p-14 ">
             Nagarahole Tiger Reserve previously known as Rajiv Gandhi
             (Nagarahole) National Park, was named after the river ‘Nagarahole’
@@ -179,7 +179,7 @@ export default function Home() {
               alt={item.title}
               className="mb-6"
             />
-            <div className="tracking-tighter pl-4 mb-4">
+            <div className="pl-4 mb-4">
               <p className="text-left text-2xl font-normal mb-8 ">
                 {item.title}
               </p>
@@ -196,7 +196,7 @@ export default function Home() {
 
 const SectionTitle = ({ text }) => {
   return (
-    <h2 className="flex justify-center items-center font-semibold text-4xl mt-16 mb-4 tracking-tighter">
+    <h2 className="flex justify-center items-center font-semibold text-4xl mt-16 mb-4 ">
       {text}
     </h2>
   );
