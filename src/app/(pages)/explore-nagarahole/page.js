@@ -7,6 +7,9 @@ export default function explorenagarhole() {
   return (
     <>
     <Carousel slideimages={slides} autoSlide={true}/>
+    <div className='grid text-center'>
+    <div className="text-4xl text-center pt-20">Explore Nagarahole</div>
+    </div>
     <div className='grid gap-3'>
     {PageData.map((data,index) => (<>
     <TextOverImg key={index} data={data} gridPosition={data.gridPosition}/>
