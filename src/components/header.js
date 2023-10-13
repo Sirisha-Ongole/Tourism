@@ -3,7 +3,7 @@ import { Fragment, useState, u } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
 import Link from "next/link";
-
+import Image from "next/image";
 
 export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,14 +11,14 @@ export default function Example() {
   return (
     <>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between lg:px-8"
+        className="mx-auto flex h-100 max-w-7xl items-center justify-between lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <a href="#">
+          <Link href="#">
             <span className="sr-only">Nagarhole</span>
-            <img className="w-28" src="/NTRlogo.png" alt="" />
-          </a>
+            <img className="w-28" src="/images/NTRlogo.png" alt="logo" />
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -88,7 +88,7 @@ export default function Example() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="/NTRlogo.png" alt="" />
+              <img className="h-8 w-auto" src="/images/NTRlogo.png" alt="" />
             </a>
             <button
               type="button"

@@ -17,7 +17,7 @@ export default function FooterWithSocialMediaIcons() {
         <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
           <div className="lg:col-span-3 col-span-12">
             <a href="/">
-                <img src="/NTRlogo.png" alt="logo" className="w-auto h-20" />
+                <img src="/images/NTRlogo.png" alt="logo" className="w-auto h-20" />
             </a>
             <p className='mt-6 mb-6 text-gray-900'>
                 Deputy Conservator of Forests Director 
@@ -34,8 +34,8 @@ export default function FooterWithSocialMediaIcons() {
             Important Links
             </h5>
             <ul className="list-none mt-6 space-y-2">
-                {navLink.map((item) => (
-                    <li>
+                {navLink.map((item, index) => (
+                    <li key={index}>
                         <Link legacyBehavior href={item.href} key={item.name}>
                         <a href="#" className={`${liText.style}`}>
                         {item.name}
@@ -50,8 +50,8 @@ export default function FooterWithSocialMediaIcons() {
             Other Links
             </h5>
             <ul className="list-none mt-6 space-y-2">
-            {newLink.map((item) => (
-                    <li>
+            {newLink.map((item, index) => (
+                    <li key={index}>
                         <Link legacyBehavior href={item.href} key={item.name}>
                         <a href="#" className={`${liText.style}`}>
                         {item.name}
