@@ -12,9 +12,18 @@ export const roboto_mono = Roboto_Mono({
 });
 
 export const whitney = localFont({
-  src: [
-    { path: "./fonts/Whitney-Light.woff", weight: "normal" },
-    { path: "./fonts/WhitneyCondensed-Light.woff", weight: "normal" },
-  ],
+  src: [{ path: "./fonts/Whitney-Light.woff" }],
   variable: "--font-whitney",
+});
+
+export const whitneyCondensed = localFont({
+  src: [
+    // { path: "./fonts/WhitneyCondensed-Black.otf", fontWeight: "900" },
+    // { path: "./fonts/WhitneyCondensed-Book.otf", fontWeight: "700" },
+    { path: "./fonts/WhitneyCondensed-Light.otf" },
+    // { path: "./fonts/WhitneyCondensed-Medium.otf", fontWeight: "400" },
+    // { path: "./fonts/WhitneyCondensed-Semibold.otf", fontWeight: "600" },
+  ],
+
+  variable: "--font-whitney-condensed",
 });
