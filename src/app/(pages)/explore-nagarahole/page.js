@@ -11,7 +11,7 @@ export default function explorenagarhole() {
     <div className="text-4xl text-center pt-20">Explore Nagarahole</div>
     </div>
     <div className='grid gap-3'>
-    {PageData.map((data,index) => (<>
+    {pageData.map((data,index) => (<>
     <TextOverImg key={index} data={data} gridPosition={data.gridPosition}/>
     </>)
     )}
@@ -19,7 +19,7 @@ export default function explorenagarhole() {
     </> 
   )
 }
-const PageData = [
+const pageData = [
 {
   gridPosition: "right",
   img: "iruppu-falls-1-2048x880.jpg",
