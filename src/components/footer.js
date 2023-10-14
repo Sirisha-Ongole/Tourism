@@ -1,5 +1,6 @@
 "use client";
 
+import { whitneyCondensed } from "@/app/fonts";
 import { Button } from "flowbite-react";
 import Link from "next/link";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -35,7 +36,9 @@ export default function Footer() {
           </p>
         </div>
         <div className="lg:col-span-2 md:col-span-4 col-span-12">
-          <h5 className="tracking-wide text-black-900 font-bold">
+          <h5
+            className={`${whitneyCondensed.className} tracking-wide text-black-900 font-bold`}
+          >
             Important Links
           </h5>
           <ul className="list-none mt-6 space-y-2">
@@ -51,7 +54,10 @@ export default function Footer() {
           </ul>
         </div>
         <div className="lg:col-span-3 md:col-span-4 col-span-12">
-          <h5 className="tracking-wide text-black-900 font-bold">
+          <h5
+            className={`${whitneyCondensed.className} tracking-wide text-black-900 font-bold`}
+          >
+            {" "}
             Other Links
           </h5>
           <ul className="list-none mt-6 space-y-2">
