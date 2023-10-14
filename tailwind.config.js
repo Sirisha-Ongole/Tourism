@@ -8,7 +8,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-whitney)", "sans-serif"],
+        sans: [ "sans-serif"],
+        whitney: ["var(--font-whitney)"],
+        whitneyCondensed: ["var(--font-whitney-condensed)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

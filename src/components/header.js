@@ -4,18 +4,19 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { whitney, whitneyCondensed } from "@/app/fonts";
 
-export default function Example() {
+export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
       <nav
-        className="mx-auto flex h-100 max-w-7xl items-center justify-between lg:px-8"
+        className={`${whitneyCondensed.className} mx-auto flex h-100  items-center justify-between lg:pl-20 lg:pr-8 `}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="#">
+          <Link href="/">
             <span className="sr-only">Nagarhole</span>
             <img className="w-28" src="/images/NTRlogo.png" alt="logo" />
           </Link>
@@ -30,19 +31,19 @@ export default function Example() {
             <FaBars className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12 ml-16">
           {headerData.map((item) => (
             <Link legacyBehavior href={item.href} key={item.name}>
               <a
                 href="#"
-                className="uppercase text-lg font-100 leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
+                className="uppercase text-lg font-normal  leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
               >
                 {item.name}
               </a>
             </Link>
           ))}
         </Popover.Group>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end mx-8">
+        <div className="lg:gap-x-12 ml-24 flex items-center">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
               <span>EN</span>
@@ -67,13 +68,16 @@ export default function Example() {
               </Popover.Panel>
             </Transition>
           </Popover>
-          <div className="bg-yellow">
-            <a
-              href="#"
-              className="uppercase text-lg font-100 leading-6 text-gray-900 bg-yellow-600 py-5 px-2"
-            >
-              Bookings
-            </a>
+
+          <div className="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
+            <div className="flex-1 text-center text-4xl items-center p-6 ">
+              <a
+                href="#"
+                className="text-white uppercase text-lg font-100 leading-6 "
+              >
+                Bookings
+              </a>
+            </div>
           </div>
         </div>
       </nav>
@@ -149,7 +153,7 @@ export default function Example() {
 const headerData = [
   {
     name: "About Us",
-    href: "/",
+    href: "/about-us",
   },
   {
     name: "News & Events",
