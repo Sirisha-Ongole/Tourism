@@ -4,6 +4,7 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
+import { whitney, whitneyCondensed } from "@/app/fonts";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Header() {
   return (
     <>
       <nav
-        className="mx-auto flex h-100  items-center justify-between lg:pl-20 lg:pr-8"
+        className={`${whitneyCondensed.className} mx-auto flex h-100  items-center justify-between lg:pl-20 lg:pr-8 `}
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -35,7 +36,7 @@ export default function Header() {
             <Link legacyBehavior href={item.href} key={item.name}>
               <a
                 href="#"
-                className="uppercase text-lg font-100 leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
+                className="uppercase text-lg font-normal  leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
               >
                 {item.name}
               </a>
@@ -68,8 +69,8 @@ export default function Header() {
             </Transition>
           </Popover>
 
-          <div class="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
-            <div class="flex-1 text-center text-4xl items-center p-6 ">
+          <div className="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
+            <div className="flex-1 text-center text-4xl items-center p-6 ">
               <a
                 href="#"
                 className="text-white uppercase text-lg font-100 leading-6 "
@@ -152,7 +153,7 @@ export default function Header() {
 const headerData = [
   {
     name: "About Us",
-    href: "/",
+    href: "/about-us",
   },
   {
     name: "News & Events",

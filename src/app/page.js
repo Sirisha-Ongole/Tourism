@@ -2,6 +2,8 @@ import React from "react";
 import { whitney, inter } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
+import { SectionTitle } from "@/components/SectionTitle";
+import { Card } from "../components/Card";
 
 export default function Home() {
   let slides = [
@@ -169,38 +171,28 @@ export default function Home() {
       <SectionTitle text="Gallery" />
       <div className="grid grid-cols-3 gap-4 w-5/6 mx-auto mb-16">
         {[
-          { title: "CARNIVORES", image: "Mask-Group-44@2x-768x484.png" },
-          { title: "HERBIVORES", image: "Mask-Group-113.png" },
-          { title: "BIRDS", image: "Mask-Group-100.png" },
+          {
+            title: "CARNIVORES",
+            image: "Mask-Group-44@2x-768x484.png",
+            link: { name: "DISCOVER MORE", href: "/gallery" },
+          },
+          {
+            title: "HERBIVORES",
+            image: "Mask-Group-113.png",
+            link: { name: "DISCOVER MORE", href: "/gallery" },
+          },
+          {
+            title: "BIRDS",
+            image: "Mask-Group-100.png",
+            link: { name: "DISCOVER MORE", href: "/gallery" },
+          },
         ].map((item, index) => (
-          <div key={index} className="bg-white">
-            <img
-              src={`/images/${item.image}`}
-              alt={item.title}
-              className="mb-6"
-            />
-            <div className="pl-4 mb-4">
-              <p className="text-left text-2xl font-normal mb-8 ">
-                {item.title}
-              </p>
-              <Link href="/gallery" className="underline">
-                DISCOVER MORE
-              </Link>
-            </div>
-          </div>
+          <Card data={item} key={index} />
         ))}
       </div>
     </div>
   );
 }
-
-const SectionTitle = ({ text }) => {
-  return (
-    <h2 className="flex justify-center items-center font-semibold text-4xl mt-16 mb-4 ">
-      {text}
-    </h2>
-  );
-};
 
 const Textbold = ({ text }) => {
   return <span className="font-semibold">{text}</span>;
