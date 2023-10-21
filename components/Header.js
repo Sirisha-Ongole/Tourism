@@ -1,8 +1,7 @@
-import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
-import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
-import Image from "next/image";
-import { whitney, whitneyCondensed } from "../fonts";
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { FaAngleDown } from "react-icons/fa";
+import { whitneyCondensed } from "../fonts";
 import { useTranslation } from "next-i18next";
 import LanguageSwitchLink from "./LanguageSwitchLink";
 import { useRouter } from "next/router";

@@ -1,17 +1,25 @@
 import React from "react";
 import { whitney } from "../../fonts";
 import Link from "../../components/Link";
-import Image from "next/image";
 import { SectionTitle } from "../../components/SectionTitle";
 import { Card } from "../../components/Card";
 import { getStaticPaths, makeStaticProps } from "../../lib/getStatic";
-import { TextImgGrid, defaultStyle } from "../../components/TextImgGrid";
+import { TextImgGrid } from "../../components/TextImgGrid";
+import { useTranslation } from "next-i18next";
+
 export default function Home() {
-  let slides = [
-    { img: "DSC2472.jpg" },
-    { img: "DSC2948.jpg" },
-    { img: "Mask-Group-2.jpg" },
-  ];
+  const { t } = useTranslation("index");
+
+  const textImgGridData = {
+    img: "Mask-Group-36@2x-1536x958.png",
+    heading: t("text12"),
+    p1: t("text13"),
+    link: {
+      text: t("text14"),
+      href: "/projects-reports",
+    },
+  };
+
   return (
     <div className={`${whitney.className} `}>
       <div className="overflow-hidden">
@@ -28,7 +36,7 @@ export default function Home() {
       </div>
       <div className="items-center bg-white pb-1">
         <p className="flex justify-center items-center text-2xl font-medium p-4">
-          Book your trip here
+          {t("text0")}
         </p>
         <button
           href="https://tickets.nagaraholetigerreserve.com/"
@@ -41,65 +49,43 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Book Now
+            {t("text1")}
           </Link>
         </button>
       </div>
 
       <div className="">
-        <SectionTitle text="Welcome to Nagarahole" />
+        <SectionTitle text={t("text2")} />
 
         {/* Grid with two columns and center border */}
         <div className="grid grid-cols-2 gap-4 text-lg font-extralight text-center leading-8 mb-16">
           <p className="flex justify-center items-center border-r border-black p-14 ">
-            Nagarahole Tiger Reserve previously known as Rajiv Gandhi
-            (Nagarahole) National Park, was named after the river ‘Nagarahole’
-            which literally means ‘Serpent River’ (Nagara=Serpent; Hole=River)
-            in Kannada language
+            {t("text3")}
           </p>
-          <p className="flex justify-center items-center p-14 ">
-            Nagarahole tiger reserve forms a critical connecting habitat for
-            tigers and elephants to other areas of Western Ghats through
-            Brahmagiri wildlife sanctuary and to the Eastern Ghats through
-            Bandipur Tiger reserve.
-          </p>
+          <p className="flex justify-center items-center p-14 ">{t("text4")}</p>
         </div>
       </div>
       <div className="">
-        <SectionTitle text="About Nagarahole" />
+        <SectionTitle text={t("text5")} />
 
         <p className="flex justify-center items-center w-5/6 mx-auto text-center text-lg">
-          Nagarahole, spread over Mysore and Kodagu is covering an area of
-          847.981 Sq km. <br />
+          {t("text6")} <br />
           <br />
-          Nagarahole is an important Tiger Reserve in Karnataka and is a major
-          hub of conservation under Project Tiger and Project Elephant. The
-          Protected Area supports large assemblages of carnivores and
-          herbivores: Tiger, Leopard, Asiatic wild dog and Sloth bear, Asiatic
-          Elephant, Gaur, Sambar, Chital, Muntjac, Four horned antelope, Wild
-          pig, Mouse deer and South-western langur. <br />
+          {t("text7")} <br />
           <br />
-          Nagarahole is contiguous with Wayanad Wildlife Sanctuary (Kerala) to
-          its south and Bandipur Tiger Reserve to its southeastern parts. The
-          park has a good number of streams and rivulets. The Kabini and Taraka
-          reservoirs are large water bodies located towards the west and
-          southeastern parts of the park respectively. <br />
+          {t("text8")} <br />
           <br />
-          Nagarahole is acclaimed as one of the high-density tiger populations
-          in the country after Corbett & Kaziranga tiger reserves respectively.
-          It comprises of some amazing landscapes and marvelous streams that
-          swerve around like a snake, leaving the wildlife enthusiasts and the
-          visitors astonishing with its natural beauty. <br />
+          {t("text9")}
           <br />
-          Nagarahole Tiger Reserve also creates an opportunity for bird
-          enthusiasts with its amazing variety of birds, which frequent this
-          place, as regularly as the enthusiasts. <br />
+          <br />
+          {t("text10")}
+          <br />
           <br />
         </p>
 
         <Link href="/about-us">
           <p className="flex justify-center items-center mx-auto text-sm font-bold mb-16">
-            KNOW MORE ABOUT US{" "}
+            {t("text11")}{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -124,10 +110,10 @@ export default function Home() {
           style={{
             textGrid: {
               holder: "grid col-span-4  mx-5 gap-2",
-          },
-          imageGrid: {
+            },
+            imageGrid: {
               holder: "col-span-8",
-          },
+            },
           }}
         />
       </div>
@@ -145,61 +131,32 @@ export default function Home() {
         />
       </div>
       <div className="font-thin w-3/4 mx-auto mb-16">
-        <SectionTitle text="History" />
-        <p className="">
-          Nagarahole Tiger Reserve had a long march since 1955, before it
-          attained the present-day status of tiger reserve under the Wild Life
-          (Protection) Act, 1972. Historically in 1955, around 285 sq km area of
-          forest under then Coorg state was declared as{" "}
-          <Textbold text="Wildlife Sanctuary" />. Government upgraded the
-          Sanctuary into a National Park by extending over an area of 571.55 Sq
-          Km in 1983. In the year 1986, Nagarahole National Park along with
-          Bandipur Tiger Reserve was included as a part of the{" "}
-          <Textbold text="‘Nilgiri Biosphere Reserve’" />.
-        </p>
+        <SectionTitle text={t("text15")} />
+        <p className="">{t("text16")}</p>
         <br />
-        <p>
-          In recognition of its good number of elephant population, Nagarahole
-          National Park was included under{" "}
-          <Textbold text="‘Project Elephant’" /> in 2000 and it was constituted
-          as part of <Textbold text="‘Mysore Elephant Reserve’" />. In 2003, an
-          area of 71.84 Sq Km was added to make it as 643.392 Sq Km area
-          National Park.
-        </p>
+        <p>{t("text17")}</p>
         <br />
-        <p>
-          In 2003, Nagarahole National Park attained the status of tiger reserve
-          by including Nagarahole under <Textbold text="‘Project Tiger’" /> and
-          made it as an extension of Bandipur Tiger Reserve. Later in 2007,
-          Nagarahole was declared as an independent Tiger Reserve by notifying
-          around 643.392 Sq Km area as{" "}
-          <Textbold text="Core/Critical Tiger Habitat" />.
-        </p>
+        <p>{t("text18")}</p>
         <br />
-        <p>
-          Finally, in 2012, Government of Karnataka has notified an area of
-          204.589 Sq Km as Buffer Zone (Notified Forests) of Nagarahole Tiger
-          Reserve expanding the total area of Tiger Reserve administration to
-          847.981 Sq km.
-        </p>
+        <p>{t("text19")}</p>
       </div>
-      <SectionTitle text="Gallery" />
+      <SectionTitle text={t("text20")} />
       <div className="grid grid-cols-3 gap-4 w-5/6 mx-auto mb-16">
         {[
           {
-            title: "CARNIVORES",
+            title: t("text21"),
             image: "Mask-Group-44@2x-768x484.png",
-            link: { name: "DISCOVER MORE", href: "/gallery" },
+            link: { name: t("text24"), href: "/gallery" },
           },
           {
-            title: "HERBIVORES",
+            title: t("text22"),
             image: "Mask-Group-113.png",
-            link: { name: "DISCOVER MORE", href: "/gallery" },
+            link: { name: t("text24"), href: "/gallery" },
           },
           {
-            title: "BIRDS",
+            title: t("text23"),
             image: "Mask-Group-100.png",
-            link: { name: "DISCOVER MORE", href: "/gallery" },
+            link: { name: t("text24"), href: "/gallery" },
           },
         ].map((item, index) => (
           <Card data={item} key={index} />
@@ -213,15 +170,5 @@ const Textbold = ({ text }) => {
   return <span className="font-semibold">{text}</span>;
 };
 
-const getStaticProps = makeStaticProps(["header"]);
+const getStaticProps = makeStaticProps(["header", "index"]);
 export { getStaticPaths, getStaticProps };
-
-const textImgGridData = {
-  img: "Mask-Group-36@2x-1536x958.png",
-  heading: "Project Initiatives in Nagarahole",
-  p1: "Our goal is to enable the Critical Tiger Habitat of Nagarahole tiger reserve as a truly inviolate area that can support viable source population of tigers along with its co-predators and prey species.",
-  link: {
-    text: "KNOW MORE ABOUT PROJECTS",
-    href: "/projects-reports",
-  },
-};
