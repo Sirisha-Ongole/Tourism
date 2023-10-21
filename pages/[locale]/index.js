@@ -4,7 +4,8 @@ import Link from "../../components/Link";
 import Image from "next/image";
 import { SectionTitle } from "../../components/SectionTitle";
 import { Card } from "../../components/Card";
-import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
+import { getStaticPaths, makeStaticProps } from "../../lib/getStatic";
+import { TextImgGrid, defaultStyle } from "../../components/TextImgGrid";
 export default function Home() {
   let slides = [
     { img: "DSC2472.jpg" },
@@ -116,7 +117,21 @@ export default function Home() {
           </p>
         </Link>
       </div>
-      <div className="grid grid-cols-6 gap-4 w-3/4 mx-auto h-[500px] mb-20">
+      <div className="w-4/5 mx-auto mb-4">
+        <TextImgGrid
+          data={textImgGridData}
+          imagePosition={"left"}
+          style={{
+            textGrid: {
+              holder: "grid col-span-4  mx-5 gap-2",
+          },
+          imageGrid: {
+              holder: "col-span-8",
+          },
+          }}
+        />
+      </div>
+      <div className="grid grid-cols-6 gap-4 w-4/5 mx-auto h-[500px] mb-20">
         {/* <div className="bg-[url('/images/Mask-Group-37@2x-1.png')]  object-cover"></div>
           <div className="bg-[url('/images/Mask-Group-38@2x-1024x639.png')]"></div> */}
         {/* Convert above two to <img>> */}
@@ -198,6 +213,15 @@ const Textbold = ({ text }) => {
   return <span className="font-semibold">{text}</span>;
 };
 
-const getStaticProps = makeStaticProps([ 'header'])
-export { getStaticPaths, getStaticProps }
+const getStaticProps = makeStaticProps(["header"]);
+export { getStaticPaths, getStaticProps };
 
+const textImgGridData = {
+  img: "Mask-Group-36@2x-1536x958.png",
+  heading: "Project Initiatives in Nagarahole",
+  p1: "Our goal is to enable the Critical Tiger Habitat of Nagarahole tiger reserve as a truly inviolate area that can support viable source population of tigers along with its co-predators and prey species.",
+  link: {
+    text: "KNOW MORE ABOUT PROJECTS",
+    href: "/projects-reports",
+  },
+};
