@@ -20,12 +20,12 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
 
   return (
     <Link href={href}>
-      <button
-        style={{ fontSize: "small" }}
+      <div
+        className="uppercase"
         onClick={() => languageDetector.cache(locale)}
       >
         {locale}
-      </button>
+      </div>
     </Link>
   );
 };

@@ -1,21 +1,19 @@
 import { Fragment, useState } from "react";
 import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { FaBars, FaWindowClose, FaAngleDown } from "react-icons/fa";
-import Link from "./Link";
 import Image from "next/image";
 import { whitney, whitneyCondensed } from "../fonts";
-// import { makeStaticProps, getStaticPaths } from "../../../lib/getStatic";
-import { makeStaticProps, getStaticPaths } from "../lib/getStatic";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 import LanguageSwitchLink from "./LanguageSwitchLink";
+import { useRouter } from "next/router";
 
-const getStaticProps = makeStaticProps(["common"]);
-export { getStaticProps, getStaticPaths };
+import i18nextConfig from "../next-i18next.config";
+import LinkComponent from "./Link";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const { t } = useTranslation("common");
+  const router = useRouter();
+  const { t } = useTranslation("header");
+  const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
 
   return (
     <>
@@ -24,37 +22,26 @@ export default function Header() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link href="/">
+          <LinkComponent href="/">
             <span className="sr-only">Nagarhole</span>
             <img className="w-28" src="/images/NTRlogo.png" alt="logo" />
-          </Link>
+          </LinkComponent>
         </div>
-        <div className="flex lg:hidden">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            onClick={() => setMobileMenuOpen(true)}
-          >
-            <span className="sr-only">Open main menu</span>
-            <FaBars className="h-6 w-6" aria-hidden="true" />
-          </button>
-        </div>
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 ml-16">
+        <Popover.Group className="hidden lg:flex lg:gap-x-8 ml-16">
           {headerData.map((item) => (
-            <Link legacyBehavior href={item.href} key={item.name}>
-              <a
-                href="#"
-                className="uppercase text-lg font-normal  leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
-              >
-                {t(item.name)}
-              </a>
-            </Link>
+            <LinkComponent
+              href={item.href}
+              key={item.name}
+              className="uppercase text-lg font-normal  leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
+            >
+              {t(item.name)}
+            </LinkComponent>
           ))}
         </Popover.Group>
         <div className="lg:gap-x-12 ml-24 flex items-center">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
-              <LanguageSwitchLink locale={"en"} key={"en"} />
+              <LanguageSwitchLink locale="en" key="en" />
               <FaAngleDown
                 className="h-5 w-5 flex-none text-gray-400"
                 aria-hidden="true"
@@ -69,8 +56,8 @@ export default function Header() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-2 top-full z-10 mt-3 max-w-xs overflow-hidden bg-[#2424240D]">
-                <LanguageSwitchLink locale={"kn"} key={"kn"} />
+              <Popover.Panel className="absolute  top-full z-10 mt-3 max-w-xs overflow-hidden hover:bg-gray-100">
+                <LanguageSwitchLink locale={"kn"} key={"KA"} />
               </Popover.Panel>
             </Transition>
           </Popover>
@@ -81,108 +68,43 @@ export default function Header() {
                 href="#"
                 className="text-white uppercase text-lg font-100 leading-6 "
               >
-                Bookings
+                {t('bookings')}
               </a>
             </div>
           </div>
         </div>
       </nav>
-      <Dialog
-        as="div"
-        className="lg:hidden"
-        open={mobileMenuOpen}
-        onClose={setMobileMenuOpen}
-      >
-        <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#2424240D] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          <div className="flex items-center justify-between">
-            <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Company</span>
-              <img className="h-8 w-auto" src="/images/NTRlogo.png" alt="" />
-            </a>
-            <button
-              type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <span className="sr-only">Close menu</span>
-              <FaWindowClose className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Disclosure as="div" className="-mx-3">
-                  {({ open }) => (
-                    <>
-                      <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
-                        KN
-                      </Disclosure.Button>
-                    </>
-                  )}
-                </Disclosure>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </a>
-              </div>
-              <div className="py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
-              </div>
-            </div>
-          </div>
-        </Dialog.Panel>
-      </Dialog>
     </>
   );
 }
 
 const headerData = [
   {
-    name: "About Us",
+    name: "about",
     href: "/about-us",
   },
   {
-    name: "News & Events",
+    name: "newsEvents",
     href: "/news-events",
   },
   {
-    name: "Gallery",
+    name: "gallery",
     href: "/gallery",
   },
   {
-    name: "Projects & Reports",
+    name: "projectsReports",
     href: "/projects-reports",
   },
   {
-    name: "Donation",
+    name: "donation",
     href: "/donation",
   },
   {
-    name: "Volunteer",
+    name: "volunteer",
     href: "/volunteer",
   },
   {
-    name: "Contact Us",
+    name: "contactUs",
     href: "/contact-us",
   },
 ];

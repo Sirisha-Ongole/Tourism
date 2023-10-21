@@ -1,10 +1,11 @@
 {
   "home": "Home",
   "about": "About Us",
-  "contact": "Contact Us",
-  "language": "Language",
-  "search": "Search",
-  "login": "Login",
-  "register": "Register",
-  "logout": "Logout"
+  "newsEvents": "News & Events",
+  "gallery": "Gallery",
+  "projectsReports": "Projects & Reports",
+  "donation": "Donation",
+  "volunteer": "Volunteer",
+  "contactUs": "Contact US",
+  "bookings": "Bookings"
 }

@@ -4,7 +4,7 @@ import Link from "../../components/Link";
 import Image from "next/image";
 import { SectionTitle } from "../../components/SectionTitle";
 import { Card } from "../../components/Card";
-
+import { getStaticPaths, makeStaticProps } from '../../lib/getStatic';
 export default function Home() {
   let slides = [
     { img: "DSC2472.jpg" },
@@ -197,3 +197,7 @@ export default function Home() {
 const Textbold = ({ text }) => {
   return <span className="font-semibold">{text}</span>;
 };
+
+const getStaticProps = makeStaticProps([ 'header'])
+export { getStaticPaths, getStaticProps }
+
