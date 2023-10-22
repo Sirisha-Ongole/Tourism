@@ -1,24 +1,34 @@
 import React from "react";
+import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
+import { useTranslation } from "next-i18next";
 
 export const Donors = () => {
+  const { t } = useTranslation("donation");
+
   return (
     <div className="font-light">
-      <p className="font-extralight">List of Organisation and Individuals donated in the Year 2021-22</p>
+      <p className="font-extralight">{t("text18")}</p>
       <table className="bg-white w-full mx-auto my-5">
         <thead>
           <tr className="text-white bg-[#332F2F] text-left ">
-            <th className="font-light p-5 rounded-tl-lg">S.No</th>
-            <th className="font-light p-5">Donors</th>
-            <th className="font-light p-5">Amount</th>
-            <th className="font-light p-5 rounded-tr-lg">Purpose</th>
+            <th className="font-light p-5 rounded-tl-lg">{t("text19")}</th>
+            <th className="font-light p-5">{t("text20")}</th>
+            <th className="font-light p-5">{t("text21")}</th>
+            <th className="font-light p-5 rounded-tr-lg">{t("text22")}</th>
           </tr>
         </thead>
         <tbody>
           {donorsData.map((item, index) => {
             return (
-              <tr key={index} className="hover:bg-[#F4F4F4] border-b text-[#656565]">
+              <tr
+                key={index}
+                className="hover:bg-[#F4F4F4] border-b text-[#656565]"
+              >
                 <td className="p-5">{item.sno}</td>
-                <td className="p-5" dangerouslySetInnerHTML={{ __html: item.donors }}></td>
+                <td
+                  className="p-5"
+                  dangerouslySetInnerHTML={{ __html: item.donors }}
+                ></td>
                 <td className="p-5">{item.amount}</td>
                 <td className="p-5">{item.purpose}</td>
               </tr>
@@ -80,3 +90,6 @@ const donorsData = [
     purpose: "",
   },
 ];
+
+const getStaticProps = makeStaticProps(["header", "donation","footer"]);
+export { getStaticPaths, getStaticProps };

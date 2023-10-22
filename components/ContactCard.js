@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "next-i18next";
 
 /**
  * A component that renders a contact card with the given contact information.
@@ -8,6 +9,8 @@ import React from "react";
  * @returns {JSX.Element} - The JSX element that represents the contact card.
  */
 export const ContactCard = ({ contact, style }) => {
+  const {t} = useTranslation("common");
+
   const defaultStyles = {
     holder: holderDefaultStyle,
     name: "text-center bg-zinc-100 uppercase m-2 p-6 font-light",
@@ -38,12 +41,12 @@ export const ContactCard = ({ contact, style }) => {
             ))}
           {contact.phone && (
             <p className={style?.phone || defaultStyles.phone}>
-              Ph: {contact.phone}
+              {t('phone')}: {contact.phone}
             </p>
           )}
           {contact.email && (
             <p className={style?.email || defaultStyles.email}>
-              Email - {contact.email}
+              {t('email')} - {contact.email}
             </p>
           )}
         </div>

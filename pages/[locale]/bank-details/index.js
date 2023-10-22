@@ -2,6 +2,7 @@ import { ContactCard } from "../../../components/ContactCard";
 import { whitney } from "../../../fonts";
 import React from "react";
 import Carousel from "../../../components/carousel";
+import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 
 export default function BankDetails() {
   // Add carousel
@@ -49,3 +50,6 @@ export default function BankDetails() {
     </div>
   );
 }
+
+const getStaticProps = makeStaticProps(["header", "donation", "footer"]);
+export { getStaticPaths, getStaticProps };

@@ -142,5 +142,5 @@ const AboutUs = () => {
 
 export default AboutUs;
 
-const getStaticProps = makeStaticProps(["header", "about"]);
+const getStaticProps = makeStaticProps(["header", "about", "footer"]);
 export { getStaticPaths, getStaticProps };

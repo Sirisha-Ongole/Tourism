@@ -1,43 +1,4 @@
-import { ContactCard } from "../../../components/ContactCard";
-import { whitney } from "../../../fonts";
-import React from "react";
-
-export default function contactUS() {
-  let slides = [{img:"DSC2472.jpg"},{img:"DSC2948.jpg"},{img:"Mask-Group-2.jpg"}]
-  return (
-    <div className={`px-10 bg-white pt-16 grid place-items-center text-[#8D8282]`}>
-      {contactUsData.map((data, index) => (
-        <div key={index} className="text-lg  text-center ">
-          <h1
-            className={`${index !== 0 ? "text-left" : ""} text-3xl text-black font-extralight mt-6`}
-          >
-            {data.contactHead}
-          </h1>
-
-          {data.mainContact && (
-            <div className="grid place-items-center">
-              <ContactCard contact={data.mainContact} />{" "}
-            </div>
-          )}
-          <div className="grid lg:grid-cols-2 grid-col-12 gap-4">
-            {data.contacts &&
-              data.contacts.map((contact, index) => (
-                <ContactCard
-                  key={index}
-                  contact={contact}
-                  style={{
-                    holder: "text-left my-5 font-extralight",
-                  }}
-                />
-              ))}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-}
-
-const contactUsData = [
+export const contactData = [
   {
     contactHead: "Contact Us",
     mainContact: {

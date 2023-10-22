@@ -1,8 +1,10 @@
-"use client";
+
 import React, { useEffect } from "react";
 import Carousel from "../../../components/carousel";
 import { SectionTitle } from "../../../components/SectionTitle";
 import { whitneyCondensed } from "../../../fonts";
+import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
+import { useTranslation } from "next-i18next";
 
 export default function Gallery() {
   // Extract unique types from images array
@@ -20,6 +22,9 @@ export default function Gallery() {
     { img: "DSC2948.jpg" },
     { img: "Mask-Group-2.jpg" },
   ];
+
+  const { t } = useTranslation("gallery");
+
   return (
     <>
       <Carousel slideimages={slides} autoSlide={true} />
@@ -35,7 +40,7 @@ export default function Gallery() {
             }  font-thin uppercase px-6 py-2 mx-2 }`}
             onClick={() => setSelectedType(type)}
           >
-            {type}
+            {t(type)}
           </button>
         ))}
       </div>
@@ -148,3 +153,6 @@ const images = [
     type: "Carnivores",
   },
 ];
+
+const getStaticProps = makeStaticProps(["header", "gallery","footer"]);
+export { getStaticPaths, getStaticProps };

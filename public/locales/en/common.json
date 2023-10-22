@@ -1,10 +1,5 @@
 {
-  "home": "Home",
-   
-  "contact": "Contact Us",
-  "language": "Language",
-  "search": "Search",
-  "login": "Login",
-  "register": "Register",
-  "logout": "Logout"
+  "phone": "Phone",
+  "email": "Email",
+  "explore":"Explore Nagarahole"
 }

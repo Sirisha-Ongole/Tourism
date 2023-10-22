@@ -61,7 +61,7 @@ const TextGrid = ({ data, style }) => {
           <>
             <div className="text-2xl">{data.heading}</div>
             <div className="">
-              <p className="font-base text-lg">{data.p1}</p>
+              <p className="font-base text-lg">{data.p1}</p><br/>
               <p className="font-base text-lg">{data.p2}</p>
             </div>
             {data.link && (

@@ -170,5 +170,5 @@ const Textbold = ({ text }) => {
   return <span className="font-semibold">{text}</span>;
 };
 
-const getStaticProps = makeStaticProps(["header", "index"]);
+const getStaticProps = makeStaticProps(["header", "index", "footer"]);
 export { getStaticPaths, getStaticProps };

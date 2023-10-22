@@ -4,13 +4,33 @@ import { DirMessage } from "./dir-message";
 import Carousel from "../../../components/carousel";
 import { HowDonate } from "./how-donate";
 import { Donors } from "./donors";
+import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
+import { useTranslation } from "next-i18next";
 
 export default function Donations() {
+  const { t } = useTranslation("donation");
+
   let slides = [
     { img: "DSC2472.jpg" },
     { img: "DSC2948.jpg" },
     { img: "Mask-Group-2.jpg" },
   ];
+
+  const donationTabs = [
+    {
+      name: t('text1'),
+      component: <DirMessage />,
+    },
+    {
+      name: t('text2'),
+      component: <HowDonate />,
+    },
+    {
+      name: t('text3'),
+      component: <Donors />,
+    },
+  ];
+
   return (
     <>
       <Carousel slideimages={slides} autoSlide={true} />
@@ -21,18 +41,5 @@ export default function Donations() {
   );
 }
 
-// JSON object with donation tab name and a component to be rendered
-export const donationTabs = [
-  {
-    name: "Field Director's Message",
-    component: <DirMessage />,
-  },
-  {
-    name: "How to Donate ?",
-    component: <HowDonate />,
-  },
-  {
-    name: "List of Donors",
-    component: <Donors />,
-  },
-];
+const getStaticProps = makeStaticProps(["header", "donation","footer"]);
+export { getStaticPaths, getStaticProps };
