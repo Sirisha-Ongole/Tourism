@@ -15,7 +15,7 @@ export default function Footer() {
       "text-black-300 hover:text-gray-500 trasation-all duration-500 ease-in-out",
   };
   return (
-    <div className="mx-auto pb-14 px-6 w-3/4">
+    <div className="mx-auto pb-14 px-6 w-3/4 text-sm">
       <div className="border-t border-gray-300"></div>
       <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
         <div className="lg:col-span-3 col-span-12">
