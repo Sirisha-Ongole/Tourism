@@ -71,7 +71,7 @@ export default function Footer() {
           <ul className="list-none mt-6 space-y-2">
             {otherLinks.map((item, index) => (
               <li key={index}>
-                <LinkComponent  
+                <LinkComponent
                   href={item.href}
                   key={item.name}
                   className={`${liText.style}`}
@@ -94,18 +94,42 @@ export default function Footer() {
             {t("social")}
           </h5>
           <div className="flex space-x-3 mt-6">
-            <Button className={`${socialIcon.style}`}>
-              <FaFacebookF />
-            </Button>
-            <Button className={`${socialIcon.style}`}>
-              <FaTwitter />
-            </Button>
-            <Button className={`${socialIcon.style}`}>
-              <FaYoutube />
-            </Button>
-            <Button className={`${socialIcon.style}`}>
-              <FaInstagram />
-            </Button>
+            <a
+              href="https://www.facebook.com/nagaraholetr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={`${socialIcon.style}`}>
+                <FaFacebookF />
+              </Button>
+            </a>
+            <a
+              href="https://twitter.com/nagaraholetr?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={`${socialIcon.style}`}>
+                <FaTwitter />
+              </Button>
+            </a>
+            <a
+              href="https://www.instagram.com/nagaraholetr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={`${socialIcon.style}`}>
+                <FaInstagram />
+              </Button>
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UC7sl70K3Uh6Yq9tdt5dwJ1A"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className={`${socialIcon.style}`}>
+                <FaYoutube />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
@@ -189,11 +213,11 @@ const miscLinks = [
   },
   {
     name: "privacyPolicy",
-    href: "/privacy-policy",
+    href: "/privacy",
   },
   {
     name: "copyRightPolicy",
-    href: "/copy-right-policy",
+    href: "/copyright-policy",
   },
   {
     name: "hyperlinkingPolicy",
