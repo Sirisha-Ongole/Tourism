@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import { whitneyCondensed } from "../fonts";
@@ -13,6 +13,18 @@ export default function Header() {
   const router = useRouter();
   const { t } = useTranslation("header");
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
+
+  const [activeHeaderItem, setActiveHeaderItem] = useState(null);
+
+  useEffect(() => {
+    const path = router.asPath;
+    const lastPart = path.slice(path.indexOf("/", path.indexOf("/") + 1));
+    let activeHeaderItem = headerData.find((item) =>
+      lastPart.includes(item.href)
+    );
+    setActiveHeaderItem(activeHeaderItem.href);
+    console.log(activeHeaderItem);
+  }, [router.asPath]);
 
   return (
     <>
@@ -31,7 +43,14 @@ export default function Header() {
             <LinkComponent
               href={item.href}
               key={item.name}
-              className="uppercase text-lg font-normal  leading-6 text-gray-900 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600"
+              className={`uppercase text-lg font-normal  leading-6 text-gray-900 
+                hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600
+                ${
+                  activeHeaderItem === item.href
+                    ? "underline underline-offset-8 text-yellow-600 border-yellow-600"
+                    : ""
+                }
+                `}
             >
               {t(item.name)}
             </LinkComponent>
@@ -67,7 +86,7 @@ export default function Header() {
                 href="#"
                 className="text-white uppercase text-lg font-100 leading-6 "
               >
-                {t('bookings')}
+                {t("bookings")}
               </a>
             </div>
           </div>
