@@ -18,27 +18,30 @@ export default function newsEvents() {
     {
       title: "Wildlife Photography Contest",
       image: "Test.png",
-      link: { name: t("text1"), href: "/gallery" },
+      link: { name: t("text1"), href: "/event/wildlife-photography-contest/" },
     },
     {
       title: "Nagarahole Tiger Conservation Plan",
       image: "cropped-NTRlogo-01.png",
-      link: { name: t("text1"), href: "/gallery" },
+      link: {
+        name: t("text1"),
+        href: "/event/nagarahole-tiger-conservation-plan/",
+      },
     },
     {
       title: "Clean Kabini",
       image: "image-42.png",
-      link: { name: t("text1"), href: "/gallery" },
+      link: { name: t("text1"), href: "/event/clean-kabini" },
     },
     {
       title: "Latest News",
       image: "cropped-NTRlogo-01.png",
-      link: { name: t("text1"), href: "/gallery" },
+      link: { name: t("text1"), href: "/event/latest-news-2" },
     },
     {
       title: "Tender",
       image: "image2.png",
-      link: { name: t("text1"), href: "/gallery" },
+      link: { name: t("text1"), href: "/event/tender" },
     },
     {
       title: "International Tiger Day",
@@ -60,5 +63,5 @@ export default function newsEvents() {
   );
 }
 
-const getStaticProps = makeStaticProps(["header", "news-events","footer"]);
+const getStaticProps = makeStaticProps(["header", "news-events", "footer"]);
 export { getStaticPaths, getStaticProps };
