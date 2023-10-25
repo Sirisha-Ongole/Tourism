@@ -22,7 +22,9 @@ export default function Header() {
     let activeHeaderItem = headerData.find((item) =>
       lastPart.includes(item.href)
     );
-    setActiveHeaderItem(activeHeaderItem.href);
+    if (activeHeaderItem) {
+      setActiveHeaderItem(activeHeaderItem.href);
+    }
     console.log(activeHeaderItem);
   }, [router.asPath]);
 
