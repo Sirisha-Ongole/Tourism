@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import { FaAngleDown } from "react-icons/fa";
 import { whitneyCondensed } from "../fonts";
@@ -16,11 +16,13 @@ export default function Header() {
 
   const [activeHeaderItem, setActiveHeaderItem] = useState(null);
 
+  const buttonRef = useRef(null);
   useEffect(() => {
     const val = router.query.locale || i18nextConfig.i18n.defaultLocale;
-    if (val !== currentLocale)
+    if (val !== currentLocale) {
       setCurrentLocale(router.query.locale || i18nextConfig.i18n.defaultLocale);
-    console.log(router.query.locale || i18nextConfig.i18n.defaultLocale);
+      console.log(router.query.locale || i18nextConfig.i18n.defaultLocale);
+    }
   }, [router.query]);
 
   useEffect(() => {
@@ -66,7 +68,10 @@ export default function Header() {
           ))}
         </Popover.Group>
         <div className="lg:gap-x-12 ml-24 flex items-center">
-          <LanguageSwitcher currentLocale={currentLocale} />
+          <LanguageSwitcher
+            currentLocale={currentLocale}
+            buttonRef={buttonRef}
+          />
           <div className="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
             <div className="flex-1 text-center text-4xl items-center p-6 ">
               <a
@@ -83,15 +88,22 @@ export default function Header() {
   );
 }
 
-const LanguageSwitcher = ({ currentLocale }) => {
+const LanguageSwitcher = ({ currentLocale, buttonRef }) => {
+  const KannadaSwitchLink = () => (
+    <LanguageSwitchLink locale="kn" key="kn" dropDownRef={buttonRef} />
+  );
+
+  const EnglishSwitchLink = () => (
+    <LanguageSwitchLink locale="en" key="en" dropDownRef={buttonRef} />
+  );
+
   return (
     <Popover className="relative">
-      <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
-        {currentLocale === "kn" ? (
-          <LanguageSwitchLink locale="kn" key="kn" />
-        ) : (
-          <LanguageSwitchLink locale="en" key="en" />
-        )}
+      <Popover.Button
+        className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none"
+        ref={buttonRef}
+      >
+        {currentLocale === "kn" ? <KannadaSwitchLink /> : <EnglishSwitchLink />}
         <FaAngleDown
           className="h-5 w-5 flex-none text-gray-400"
           aria-hidden="true"
@@ -108,9 +120,9 @@ const LanguageSwitcher = ({ currentLocale }) => {
       >
         <Popover.Panel className="absolute  top-full z-10 mt-3 max-w-xs overflow-hidden hover:bg-gray-100">
           {currentLocale === "kn" ? (
-            <LanguageSwitchLink locale="en" key="en" />
+            <EnglishSwitchLink />
           ) : (
-            <LanguageSwitchLink locale="kn" key="kn" />
+            <KannadaSwitchLink />
           )}
         </Popover.Panel>
       </Transition>

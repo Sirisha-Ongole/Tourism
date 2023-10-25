@@ -2,7 +2,7 @@ import languageDetector from "../lib/languageDetector";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-const LanguageSwitchLink = ({ locale, ...rest }) => {
+const LanguageSwitchLink = ({ locale, dropDownRef, ...rest }) => {
   const router = useRouter();
 
   let href = rest.href || router.asPath;
@@ -22,7 +22,10 @@ const LanguageSwitchLink = ({ locale, ...rest }) => {
     <Link href={href}>
       <div
         className="uppercase"
-        onClick={() => languageDetector.cache(locale)}
+        onClick={() => {
+          languageDetector.cache(locale);
+          dropDownRef.current.click();
+        }}
       >
         {locale}
       </div>
