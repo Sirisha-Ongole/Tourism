@@ -54,7 +54,7 @@ export default function NewsEvents() {
     <>
       <Carousel slideimages={slides} autoSlide={true} />
       <SectionTitle text={t("text2")} />
-      <div className="grid grid-cols-3 gap-4 w-3/4 mx-auto my-12">
+      <div className="grid lg:grid-cols-3 gap-4 w-3/4 mx-auto my-12">
         {data.map((item, index) => (
           <Card data={item} key={index} />
         ))}

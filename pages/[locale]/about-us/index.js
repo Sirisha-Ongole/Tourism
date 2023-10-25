@@ -47,8 +47,8 @@ const AboutUs = () => {
 
   const otherAttractions = [
     {
-      title: t("text27"),
       image: "Mask-Group-44@2x-768x484.png",
+      title: t("text27"),
       text: t("text28"),
       link: { name: t("text29") },
     },
@@ -83,21 +83,21 @@ const AboutUs = () => {
           alt="map"
           className=" mx-auto mr-24 mb-16"
         />
-        <div className="grid grid-cols-3 gap">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap">
           <img
             src="/images/DS.jpeg"
             alt="map"
-            className=" mx-auto col-span-2 pr-20"
+            className=" mx-auto lg:col-span-2 col-span-6"
           />
-          <div>
+          <div className="lg:col-span-1 col-span-6 lg:ps-20">
             <SectionTitle
               text={t("text6")}
               appendStyles={true}
-              styles={"mt-0 text-left"}
+              styles={"mt-4 lg:text-left text-center"}
             />
-            <p className="text-left">{t("text7")}</p>
+            <p className="lg:text-left text-center">{t("text7")}</p>
             <button
-              className={`${whitneyCondensed.className} bg-black text-white rounded flex items-start px-6 py-2 mt-8`}
+              className={`${whitneyCondensed.className} bg-black text-white rounded flex lg:ms-0 ms-20 px-6 py-2 mt-8`}
             >
               {t("text8")}
             </button>
@@ -108,10 +108,10 @@ const AboutUs = () => {
         <SectionTitle text={t("text11")} />
         <SectionTitle text={t("text12")} styles={"mt-2 mb-12"} />
         {biodiversityData.map((item, index) => (
-          <div key={index} className="grid grid-cols-4 gap-4 ">
-            <div className="text-2xl font-bold my-auto p-2.5">{item.type}</div>
+          <div key={index} className="grid lg:grid-cols-4 grid-cols-3 gap-4">
+            <div className="text-2xl lg:col-span-1 col-span-3 font-bold my-auto p-2.5 justify-center">{item.type}</div>
             <div className="col-span-3">
-              <div className="grid grid-cols-3">
+              <div className="grid grid-cols-3 lg:gap-1 gap-7 text-center">
                 {item.subTypes.map((subItem, index) => (
                   <div key={index}>
                     <IncrementalNumbers max={subItem.count} />
@@ -125,7 +125,7 @@ const AboutUs = () => {
           </div>
         ))}
         <SectionTitle text={t("text26")} />
-        <div className="grid grid-cols-3 gap-4 ">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 ">
           {otherAttractions.map((item, index) => (
             <Card data={item} key={index} />
           ))}

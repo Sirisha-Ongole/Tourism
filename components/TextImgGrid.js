@@ -1,13 +1,15 @@
 "use client";
 import React from "react";
 import LinkComponent from "./Link";
+import useWindowDimensions  from "../hooks/useWindowDimensions";
+import { useEffect, useState } from "react";
 
 export const defaultStyle = {
     textGrid: {
-        holder: "grid col-span-6 p-10 mx-10 gap-2",
+        holder: "grid lg:col-span-6 col-span-12 p-10 mx-10 gap-2",
     },
     imageGrid: {
-        holder: "col-span-6",
+        holder: "lg:col-span-6 col-span-12",
     },
 };
 
@@ -16,11 +18,21 @@ export const TextImgGrid = ({
   style = defaultStyle,
   imagePosition,
 }) => {
+
+  const [windowWidth, setWindowWidth] = useState(0);
+  useEffect(() => {
+  function handleResize() {
+    setWindowWidth(window.innerWidth);
+  }
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+  }, [windowWidth]);
+
   return (
     <>
       {data && (
         <div className="grid grid-cols-12">
-          {imagePosition === "left" ? (
+          {imagePosition === "left" || windowWidth <= "820" ? (
             <>
               <ImgGrid data={data} style={style.imageGrid} />
               <TextGrid data={data} style={style.textGrid} />
@@ -54,7 +66,7 @@ const ImgGrid = ({ data, style }) => {
 };
 
 const TextGrid = ({ data, style }) => {
-  return (
+    return (
     <>
       <div className={style.holder}>
         {data && (
@@ -66,7 +78,7 @@ const TextGrid = ({ data, style }) => {
             </div>
             {data.link && (
               <LinkComponent href={data.link.href}>
-                <p className="flex text-sm font-bold mb-16 h-full items-end pb-4 ml-4">
+                <p className="flex text-sm font-bold lg:mb-16 h-full items-end pb-4 lg:ml-4">
                   {data.link.text}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -29,7 +29,7 @@ export default function Gallery() {
     <>
       <Carousel slideimages={slides} autoSlide={true} />
       <SectionTitle text="Gallery" />
-      <div className="flex justify-center items-center">
+      <div className="grid lg:grid-cols-4 grid-cols-4 lg:w-1/2 mx-auto justify-center items-center gap-2">
         {types.map((type, index) => (
           <button
             key={index}
@@ -37,14 +37,14 @@ export default function Gallery() {
               selectedType === type
                 ? "bg-[#D0AD59] rounded text-white"
                 : " text-black bg-transparent"
-            }  font-thin uppercase px-6 py-2 mx-2 }`}
+            }  font-thin uppercase lg:px-6 py-2 lg:mx-2 }`}
             onClick={() => setSelectedType(type)}
           >
             {t(type)}
           </button>
         ))}
       </div>
-      <div className="grid grid-cols-3 gap-4 w-5/6 mx-auto my-12">
+      <div className="grid lg:grid-cols-3 grid-cols-2 gap-4 w-5/6 mx-auto my-12">
         {images.map((item, index) => (
           <div
             key={index}
@@ -52,7 +52,7 @@ export default function Gallery() {
               selectedType === "All" || selectedType === item.type
                 ? "block"
                 : "hidden"
-            }`}
+            } h-[150px] w-auto lg:h-[230px] lg:w-auto`}
           >
             <img
               className="w-full h-full object-cover"

@@ -134,8 +134,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-300 pt-10">
-        <div className="grid grid-cols-3">
-          <div>
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-1">
+          <div className="lg:text-left text-center">
             © Copyrights 2023. All Rights Reserved <br />
             Nagarahole Tiger Reserve, Karnataka Forest Dept.
           </div>

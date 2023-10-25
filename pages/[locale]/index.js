@@ -58,8 +58,8 @@ export default function Home() {
         <SectionTitle text={t("text2")} />
 
         {/* Grid with two columns and center border */}
-        <div className="grid grid-cols-2 gap-4 text-lg font-extralight text-center leading-8 mb-16">
-          <p className="flex justify-center items-center border-r border-black p-14 ">
+        <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-4 text-lg font-extralight text-center leading-8 mb-16">
+          <p className="flex justify-center items-center lg:border-r lg:border-black p-14 ">
             {t("text3")}
           </p>
           <p className="flex justify-center items-center p-14 ">{t("text4")}</p>
@@ -109,28 +109,28 @@ export default function Home() {
           imagePosition={"left"}
           style={{
             textGrid: {
-              holder: "grid col-span-4  mx-5 gap-2",
+              holder: "grid lg:col-span-4 col-span-12  lg:mx-5 gap-2",
             },
             imageGrid: {
-              holder: "col-span-8",
+              holder: "lg:col-span-8 col-span-12",
             },
           }}
         />
       </div>
-      <div className="grid grid-cols-6 gap-4 w-4/5 mx-auto h-[500px] mb-20">
+      <div className="grid lg:grid-cols-6 grid-cols-2 gap-4 w-4/5 mx-auto h-[500px] mb-20">
         {/* <div className="bg-[url('/images/Mask-Group-37@2x-1.png')]  object-cover"></div>
           <div className="bg-[url('/images/Mask-Group-38@2x-1024x639.png')]"></div> */}
         {/* Convert above two to <img>> */}
         <img
           src="/images/Mask-Group-37@2x-1.png"
-          className=" col-span-2 h-[500px]"
+          className=" lg:col-span-2 col-span-12 h-[500px]"
         />
         <img
           src="/images/Mask-Group-38@2x-1024x639.png"
-          className=" col-span-4  h-[500px]"
+          className=" lg:col-span-4 col-span-12  lg:h-[500px]"
         />
       </div>
-      <div className="font-thin w-3/4 mx-auto mb-16">
+      <div className="font-thin w-3/4 mx-auto lg:mb-16 pt-20 lg:pt-0">
         <SectionTitle text={t("text15")} />
         <p className="">{t("text16")}</p>
         <br />
@@ -141,7 +141,7 @@ export default function Home() {
         <p>{t("text19")}</p>
       </div>
       <SectionTitle text={t("text20")} />
-      <div className="grid grid-cols-3 gap-4 w-5/6 mx-auto mb-16">
+      <div className="grid lg:grid-cols-3 gap-4 w-5/6 mx-auto mb-16">
         {[
           {
             title: t("text21"),
