@@ -2,7 +2,7 @@ import React from "react";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 
-export const DirMessage = () => {
+export default function DirMessage() {
   const { t } = useTranslation("donation");
 
   return (

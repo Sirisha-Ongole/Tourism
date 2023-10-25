@@ -1,9 +1,9 @@
 import { Tabs } from "../../../components/Tabs";
 import React from "react";
-import { DirMessage } from "./dir-message";
+import DirMessage from "./dir-message";
 import Carousel from "../../../components/carousel";
-import { HowDonate } from "./how-donate";
-import { Donors } from "./donors";
+import HowDonate  from "./how-donate";
+import Donors  from "./donors";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 

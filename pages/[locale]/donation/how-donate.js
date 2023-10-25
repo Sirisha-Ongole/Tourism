@@ -4,7 +4,7 @@ import React from "react";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 import LinkComponent from "../../../components/Link";
-export const HowDonate = () => {
+export default function HowDonate () {
   const { t } = useTranslation("donation");
 
   return (
