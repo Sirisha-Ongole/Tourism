@@ -22,7 +22,7 @@ export default function Header() {
     const val = router.query.locale || i18nextConfig.i18n.defaultLocale;
     if (val !== currentLocale) {
       setCurrentLocale(router.query.locale || i18nextConfig.i18n.defaultLocale);
-      console.log(router.query.locale || i18nextConfig.i18n.defaultLocale);
+      // console.log(router.query.locale || i18nextConfig.i18n.defaultLocale);
     }
   }, [router.query]);
 
@@ -35,7 +35,7 @@ export default function Header() {
     if (activeHeaderItem) {
       setActiveHeaderItem(activeHeaderItem);
     }
-    console.log(activeHeaderItem);
+    // console.log(activeHeaderItem);
   }, [router.asPath]);
 
   return (

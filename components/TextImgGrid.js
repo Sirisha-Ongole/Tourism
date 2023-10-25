@@ -1,38 +1,34 @@
 "use client";
 import React from "react";
 import LinkComponent from "./Link";
-import useWindowDimensions  from "../hooks/useWindowDimensions";
+import useWindowDimensions from "../hooks/useWindowDimensions";
 import { useEffect, useState } from "react";
 
 export const defaultStyle = {
-    textGrid: {
-        holder: "grid lg:col-span-6 col-span-12 p-10 mx-10 gap-2",
-    },
-    imageGrid: {
-        holder: "lg:col-span-6 col-span-12",
-    },
+  textGrid: {
+    holder: "grid lg:col-span-6 col-span-12 p-10 mx-10 gap-2",
+  },
+  imageGrid: {
+    holder: "lg:col-span-6 col-span-12",
+  },
 };
 
-export const TextImgGrid = ({
-  data,
-  style = defaultStyle,
-  imagePosition,
-}) => {
-
+export const TextImgGrid = ({ data, style = defaultStyle, imagePosition }) => {
   const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
-  function handleResize() {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
     setWindowWidth(window.innerWidth);
-  }
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [windowWidth]);
 
   return (
     <>
       {data && (
         <div className="grid grid-cols-12">
-          {imagePosition === "left" || windowWidth <= "820" ? (
+          {imagePosition === "left" || windowWidth <= "991" ? (
             <>
               <ImgGrid data={data} style={style.imageGrid} />
               <TextGrid data={data} style={style.textGrid} />
@@ -66,14 +62,15 @@ const ImgGrid = ({ data, style }) => {
 };
 
 const TextGrid = ({ data, style }) => {
-    return (
+  return (
     <>
       <div className={style.holder}>
         {data && (
           <>
             <div className="text-2xl">{data.heading}</div>
             <div className="">
-              <p className="font-base text-lg">{data.p1}</p><br/>
+              <p className="font-base text-lg">{data.p1}</p>
+              <br />
               <p className="font-base text-lg">{data.p2}</p>
             </div>
             {data.link && (

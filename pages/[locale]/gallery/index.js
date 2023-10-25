@@ -13,14 +13,11 @@ export default function Gallery() {
   types.unshift("All");
 
   const [selectedType, setSelectedType] = React.useState(types[0]);
-  useEffect(() => {
-    console.log(types);
-  }, []);
 
   let slides = [
-    { img: "DSC2472.jpg" },
-    { img: "DSC2948.jpg" },
-    { img: "Mask-Group-2.jpg" },
+    { img: "Mask-Group-9.png" },
+    { img: "Mask-Group-7.png" },
+    { img: "DSC0380-1.jpeg" },
   ];
 
   const { t } = useTranslation("gallery");

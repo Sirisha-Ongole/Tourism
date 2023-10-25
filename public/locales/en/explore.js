@@ -9,7 +9,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "mruthyu-temple.jpg",
     alt: "Mruthyunjaya Swami Temple",
     heading: "Mruthyunjaya Swami Temple",
     body: "Sri Mruthyunjaya Swami Temple is located in small village named Badagarakeri in Virajpet Taluk. ",
@@ -17,7 +17,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "vishnu-1-1536x857.jpg",
     alt: "Thiruneli Vishnu Temple",
     heading: "Thiruneli Vishnu Temple",
     body: "Thirunelli Temple is an ancient temple dedicated to Lord Maha Vishnu on the side of Brahmagiri hill in Kerala, near the border with Karnataka state. The temple is located in valley surrounded by mountains and beautiful forests.",
@@ -25,7 +25,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "tea-estate.jpg",
     alt: "Tea Estate Landscape",
     heading: "Tea Estate Landscape",
     body: "The tea gardens are spread over around 1,200 acres of land and in that capacity can yield unlimited hours of walking in the midst of such rich greenery combined with fresh mountain air and silence broken by such winged animals as the Malabar whistling thrush and Malabar hornbill.",
@@ -33,7 +33,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "wayanad-wildlife-sanctuary-tourism-entry-fee-timings-holidays-reviews-header-1.jpg",
     alt: "Wayanad Wildlife Sanctuary Tholpetty Safari Point",
     heading: "Wayanad Wildlife Sanctuary Tholpetty Safari Point",
     body: "The Wayanad Wildlife Sanctuary is bestowed with lush green forests and rich wildlife.This wildlife area houses some of the rare and endangered species of both flora and fauna.",
@@ -41,7 +41,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "Kabini-1.jpg",
     alt: "Kabini Dam",
     heading: "Kabini Dam",
     body: "The Kabini dam is built on the River Kapila in the district of Mysore. The dam is 696 meters in length and was built in 1974.The dam is spread over an area of 55 hectares covering forests, rivers, lakes and valleys.",
@@ -49,7 +49,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "chikka-betta-2.jpg",
     alt: "Chikkadevammana Betta",
     heading: "Chikkadevammana Betta",
     body: "Chikkadevvamma Hill is a sacred place situated at Kundur Village in the Mysore district of Karnataka State.There is a temple on the hilltop and is dedicated to Goddess Chikka Devamma.The hill is also surrounded by forest so one can find elephants, leopards, deers, and other animals here.",

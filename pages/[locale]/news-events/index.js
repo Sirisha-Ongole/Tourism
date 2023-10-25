@@ -7,8 +7,8 @@ import { useTranslation } from "next-i18next";
 
 export default function NewsEvents() {
   let slides = [
-    { img: "DSC2472.jpg" },
-    { img: "DSC2948.jpg" },
+    { img: "DSC2129.jpeg" },
+    { img: "Mask-Group-5.jpg" },
     { img: "Mask-Group-2.jpg" },
   ];
 

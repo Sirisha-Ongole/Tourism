@@ -7,9 +7,9 @@ import { useTranslation } from "next-i18next";
 
 export default function ProjectReports() {
   let slides = [
-    { img: "DSC2472.jpg" },
-    { img: "DSC2948.jpg" },
-    { img: "Mask-Group-2.jpg" },
+    { img: "Mask-Group-10.png" },
+    { img: "DSC5576-1-e1624969764398.jpeg" },
+    { img: "DSC6832.jpeg" },
   ];
 
   const { t } = useTranslation("project-reports");
@@ -25,7 +25,7 @@ export default function ProjectReports() {
     },
     {
       ImagePosition: "right",
-      img: "Eco-Tourism.jpg",
+      img: "DSC5576-1.jpeg",
       alt: "Project Tiger",
       heading: t("text4"),
       p1: t("text5"),
@@ -33,7 +33,7 @@ export default function ProjectReports() {
     },
     {
       ImagePosition: "left",
-      img: "Eco-Tourism.jpg",
+      img: "Tribal-Rehabiliation-1-scaled.jpg",
       alt: "Tribal Rehabilitation",
       heading: t("text7"),
       p1: t("text8"),
