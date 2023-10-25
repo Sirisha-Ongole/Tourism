@@ -5,7 +5,7 @@ import { Card } from "../../../components/Card";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 
-export default function newsEvents() {
+export default function NewsEvents() {
   let slides = [
     { img: "DSC2472.jpg" },
     { img: "DSC2948.jpg" },

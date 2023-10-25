@@ -8,7 +8,7 @@ import { contactData as contactDataKn } from "../../../public/locales/kn/contact
 import { contactData as contactDataEn } from "../../../public/locales/en/contact";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 
-export default function contactUS() {
+export default function ContactUS() {
   const router = useRouter();
   const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
 

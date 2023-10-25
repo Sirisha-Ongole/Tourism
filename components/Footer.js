@@ -19,9 +19,9 @@ export default function Footer() {
       <div className="border-t border-gray-300"></div>
       <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
         <div className="lg:col-span-3 col-span-12">
-          <a href="/">
+          <LinkComponent href="/">
             <img src="/images/NTRlogo.png" alt="logo" className="w-auto h-28" />
-          </a>
+          </LinkComponent>
           <p className="mt-6 mb-6 text-gray-900">
             {t("text3")}
             <br />

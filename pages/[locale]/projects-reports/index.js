@@ -5,7 +5,7 @@ import Link from "next/link";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 
-export default function projectReports() {
+export default function ProjectReports() {
   let slides = [
     { img: "DSC2472.jpg" },
     { img: "DSC2948.jpg" },

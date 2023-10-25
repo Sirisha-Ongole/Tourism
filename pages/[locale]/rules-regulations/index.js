@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "next-i18next";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 
-export default function refundandCacellation() {
+export default function RefundandCacellation() {
   const { t } = useTranslation("refund-and-cancellation");
 
   const liStyle = {

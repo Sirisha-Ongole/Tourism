@@ -9,7 +9,7 @@ import { exploreData as exploreDataKn } from "../../../public/locales/kn/explore
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
 
-export default function explorenagarhole() {
+export default function ExploreNagarhole() {
   let slides = [
     { img: "DSC2472.jpg" },
     { img: "DSC2948.jpg" },

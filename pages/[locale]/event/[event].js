@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 
-function index() {
+function Index() {
   const router = useRouter();
 
   const [displayHtml, setDisplayHtml] = useState(null);
@@ -19,7 +19,7 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
 
 const htmlData = {
   tender: `<h5 style="text-align: center">13 Jan 2022</h5>
