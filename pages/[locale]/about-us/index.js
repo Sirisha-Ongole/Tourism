@@ -71,7 +71,7 @@ const AboutUs = () => {
       <Carousel slideimages={slides} autoSlide={true} />
       <SectionTitle text={t("text1")} />
       <div
-        className={`${whitney.className} w-3/4 text-base mx-auto text-center `}
+        className={`${whitney.className} w-4/5 text-base mx-auto text-center `}
       >
         <p className="">
           {t("text2")} <br /> <br /> {t("text3")}
@@ -97,7 +97,7 @@ const AboutUs = () => {
             />
             <p className="lg:text-left text-center">{t("text7")}</p>
             <button
-              className={`${whitneyCondensed.className} bg-black text-white rounded flex lg:ms-0 ms-20 px-6 py-2 mt-8`}
+              className={`${whitneyCondensed.className} bg-black text-white rounded flex lg:mx-0 px-6 py-2 mt-8 mx-auto `}
             >
               {t("text8")}
             </button>
