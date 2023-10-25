@@ -12,9 +12,16 @@ import LinkComponent from "./Link";
 export default function Header() {
   const router = useRouter();
   const { t } = useTranslation("header");
-  const currentLocale = router.query.locale || i18nextConfig.i18n.defaultLocale;
+  const [currentLocale, setCurrentLocale] = useState(router.locale);
 
   const [activeHeaderItem, setActiveHeaderItem] = useState(null);
+
+  useEffect(() => {
+    const val = router.query.locale || i18nextConfig.i18n.defaultLocale;
+    if (val !== currentLocale)
+      setCurrentLocale(router.query.locale || i18nextConfig.i18n.defaultLocale);
+    console.log(router.query.locale || i18nextConfig.i18n.defaultLocale);
+  }, [router.query]);
 
   useEffect(() => {
     const path = router.asPath;
@@ -59,29 +66,7 @@ export default function Header() {
           ))}
         </Popover.Group>
         <div className="lg:gap-x-12 ml-24 flex items-center">
-          <Popover className="relative">
-            <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
-              <LanguageSwitchLink locale="en" key="en" />
-              <FaAngleDown
-                className="h-5 w-5 flex-none text-gray-400"
-                aria-hidden="true"
-              />
-            </Popover.Button>
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-200"
-              enterFrom="opacity-0 translate-y-1"
-              enterTo="opacity-100 translate-y-0"
-              leave="transition ease-in duration-150"
-              leaveFrom="opacity-100 translate-y-0"
-              leaveTo="opacity-0 translate-y-1"
-            >
-              <Popover.Panel className="absolute  top-full z-10 mt-3 max-w-xs overflow-hidden hover:bg-gray-100">
-                <LanguageSwitchLink locale={"kn"} key={"KA"} />
-              </Popover.Panel>
-            </Transition>
-          </Popover>
-
+          <LanguageSwitcher currentLocale={currentLocale} />
           <div className="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
             <div className="flex-1 text-center text-4xl items-center p-6 ">
               <a
@@ -98,6 +83,40 @@ export default function Header() {
   );
 }
 
+const LanguageSwitcher = ({ currentLocale }) => {
+  return (
+    <Popover className="relative">
+      <Popover.Button className="flex items-center gap-x-1 uppercase text-lg font-100 text-gray-900 border-none">
+        {currentLocale === "kn" ? (
+          <LanguageSwitchLink locale="kn" key="kn" />
+        ) : (
+          <LanguageSwitchLink locale="en" key="en" />
+        )}
+        <FaAngleDown
+          className="h-5 w-5 flex-none text-gray-400"
+          aria-hidden="true"
+        />
+      </Popover.Button>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-200"
+        enterFrom="opacity-0 translate-y-1"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition ease-in duration-150"
+        leaveFrom="opacity-100 translate-y-0"
+        leaveTo="opacity-0 translate-y-1"
+      >
+        <Popover.Panel className="absolute  top-full z-10 mt-3 max-w-xs overflow-hidden hover:bg-gray-100">
+          {currentLocale === "kn" ? (
+            <LanguageSwitchLink locale="en" key="en" />
+          ) : (
+            <LanguageSwitchLink locale="kn" key="kn" />
+          )}
+        </Popover.Panel>
+      </Transition>
+    </Popover>
+  );
+};
 const headerData = [
   {
     name: "about",
