@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 
 import i18nextConfig from "../next-i18next.config";
 import LinkComponent from "./Link";
+import Head from "next/head";
 
 export default function Header() {
   const router = useRouter();
@@ -32,13 +33,16 @@ export default function Header() {
       lastPart.includes(item.href)
     );
     if (activeHeaderItem) {
-      setActiveHeaderItem(activeHeaderItem.href);
+      setActiveHeaderItem(activeHeaderItem);
     }
     console.log(activeHeaderItem);
   }, [router.asPath]);
 
   return (
     <>
+      <Head>
+        <title>{t(activeHeaderItem?.name) + " - Nagarhole Tiger Reserve"}</title>
+      </Head>
       <nav
         className={`${whitneyCondensed.className} mx-auto flex h-100  items-center justify-between lg:pl-20 lg:pr-8 `}
         aria-label="Global"
@@ -57,7 +61,7 @@ export default function Header() {
               className={`uppercase text-lg font-normal  leading-6 text-gray-900 
                 hover:underline hover:underline-offset-8 hover:text-yellow-600 hover:border-yellow-600
                 ${
-                  activeHeaderItem === item.href
+                  activeHeaderItem?.href === item.href
                     ? "underline underline-offset-8 text-yellow-600 border-yellow-600"
                     : ""
                 }
