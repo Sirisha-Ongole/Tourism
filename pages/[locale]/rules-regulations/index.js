@@ -11,7 +11,7 @@ export default function RefundandCacellation() {
 
   return (
     <div className="bg-white p-10">
-      <div className="w-1/2 mx-auto">
+      <div className="lg:w-1/2 w-full mx-auto">
         <div className="text-3xl font-bold mx-auto text-center mb-10">
           {t("text1")}
         </div>

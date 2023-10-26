@@ -19,9 +19,9 @@ export default function DoandDonts() {
     <div div className="bg-white">
       <Carousel slideimages={slides} autoSlide={true} />
       <div className="bg-white py-10 grid place-items-center w-3/4 mx-auto">
-        <div className="text-3xl text-gray-800 py-10 font-semibold">{t("text1")}</div>
-        <div className="grid grid-cols-12 justify-center px-20 gap-7">
-          <div className="col-span-7">
+        <div className="text-2xl text-gray-800 py-10 font-semibold">{t("text1")}</div>
+        <div className="grid grid-cols-12 justify-center lg:px-20 gap-7">
+          <div className="lg:col-span-7 col-span-12">
             <div className="text-2xl text-gray-800 pb-5">{t("text2")}:</div>
             <div>
               <ul key={"12"} className={`${liStyle.style}`}>
@@ -33,7 +33,7 @@ export default function DoandDonts() {
               </ul>
             </div>
           </div>
-          <div className="col-span-5">
+          <div className="lg:col-span-5 col-span-12">
             <div className="text-2xl text-gray-800 pb-5">{t("text8")}:</div>
             <div>
               <ul key={"13"} className={`${liStyle.style}`}>
