@@ -13,7 +13,7 @@ export default function volunter() {
     <Carousel slideimages={slides} autoSlide={true}/>
       <div className={`grid md:grid-cols-12 grid-cols-12 mx-auto w-3/4 py-20 ${whitney.className}`}>
         <div className='lg:col-span-4 md:col-span-5 col-span-12'>
-          <h4 className='px-10 text-sm lg:text-4xl md:text-xl py-2'>Willing to Volunteer ?</h4>
+          <h4 className='px-10 text-sm lg:text-3xl md:text-xl py-2'>Willing to Volunteer ?</h4>
         </div>
         <div className='lg:col-span-6 md:col-span-5 col-span-12'>
           <form className='px-10'>

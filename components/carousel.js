@@ -21,7 +21,7 @@ export default function Carousel({ slideimages,  autoSlide = false, autoSlideInt
         if (!autoSlide) return
         const slideInterval = setInterval(nextSlide, autoSlideInterval)
         return () => clearInterval(slideInterval)
-      }, [currentSlide])
+    }, [currentSlide])
 
     return (
         <>

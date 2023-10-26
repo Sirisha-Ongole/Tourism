@@ -10,12 +10,12 @@ export const Tabs = ({ data }) => {
 
   return (
     <div className="border-b border-gray-200 dark:border-gray-700  text-black">
-      <ul className="flex flex-wrap -mb-px text-xl font-medium text-center ">
+      <ul className="flex flex-wrap -mb-px lg:text-xl text-xl font-bold text-center ">
         {
           // Map through the tabs data
           data.map((tab, index) => (
             <li
-              className={`p-12 pb-4 mr-1 cursor-pointer ${
+              className={`lg:px-12 lg:py-6 p-3 pb-4 mr-1 cursor-pointer ${
                 // if active tab, show underline with animation from left to right
                 activeTab === index
                   ? "border-b-2 border-black transition-all duration-500 transform"
