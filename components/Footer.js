@@ -8,7 +8,8 @@ export default function Footer() {
   const { t } = useTranslation(["footer"]);
 
   let socialIcon = {
-    style: "w-10 h-10 rounded-full bg-black text-center text-white text-4xl",
+    style:
+      "w-10 h-10 rounded-full bg-black text-center text-white text-4xl hover:bg-[#A9CF38]",
   };
   let liText = {
     style:
@@ -80,14 +81,12 @@ export default function Footer() {
                 </LinkComponent>
               </li>
             ))}
+            <li className="mt-10">
+              <LinkComponent className=" px-5 py-3 rounded traking-wide border duration-500 text-base textcenter bg-yellow-600 text-white uppercase">
+                Department Login
+              </LinkComponent>
+            </li>
           </ul>
-          <form action="#" className="mt-3">
-            <input
-              type="submit"
-              className="py-2 px-5 traking-wide border duration-500 text-base textcenter bg-yellow-600 hover:bg-gray-300 text-white uppercase"
-              value="Department Login"
-            />
-          </form>
         </div>
         <div className="lg:col-span-3 md:col-span:4 col-span-12">
           <h5 className="tracking-wide text-black-900 font-bold">

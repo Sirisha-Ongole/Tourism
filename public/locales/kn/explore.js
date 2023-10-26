@@ -9,7 +9,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "mruthyu-temple.jpg",
     alt: "Mruthyunjaya Swami Temple",
     heading: "ಶ್ರೀ ಮೃತ್ಯುಂಜಯ ಸ್ವಾಮಿ ದೇವಾಲಯ",
     body: "ವಿರಾಜಪೇಟೆ ತಾಲ್ಲೂಕಿನ ಬಡಿಗೇರಕೇರಿಯೆಂಬ ಚಿಕ್ಕ ಗ್ರಾಮದಲ್ಲಿ ಶ್ರೀ ಮೃತ್ಯುಂಜಯ ಸ್ವಾಮಿ ದೇವಾಲಯವಿದೆ.",
@@ -17,7 +17,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "vishnu-1-1536x857.jpg",
     alt: "Thiruneli Vishnu Temple",
     heading: "ತಿರುನೆಲ್ಲಿ ಮಹಾವಿಷ್ಣು ದೇವಾಲಯ",
     body: "ಶ್ರೀ ಮಹಾವಿಷ್ಣುವಿನ ಪ್ರಾಚೀನ ಕಾಲದ ತಿರುನೆಲ್ಲಿ ದೇವಾಲಯವು ಕೇರಳದ ಬ್ರಹ್ಮಗಿರಿ ಬೆಟ್ಟ ಶ್ರೇಣಿಯ ಪಕ್ಕದಲ್ಲಿದ್ದು, ಕರ್ನಾಟಕದ ಗಡಿರೇಖೆಗೆ ಹತ್ತಿರದಲ್ಲಿದೆ.",
@@ -25,7 +25,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "tea-estate.jpg",
     alt: "Tea Estate Landscape",
     heading: "ಟೀ ಎಸ್ಟೇಟ್",
     body: "ಪರ್ವತಗಳ ತಾಜಾ ಗಾಳಿ ಹಾಗೂ ಶ್ರೀಮಂತ ಹಸಿರು ರಾಶಿಯ ನಡುವೆ ಸರಿಸುಮಾರು 1200 ಎಕರೆ ಪ್ರದೇಶದಲ್ಲಿ ಹರಡಿರುವ ಟೀ ತೋಟದಲ್ಲಿ ಅನಿಯಮಿತ ಕಾಲ ನೀರವ ಕಾಲ್ನಡಿಗೆಯಲ್ಲಿ ತೆರಳುವಾಗ ಮಲೆ ಸೀಟಿ ಸಿಳ್ಳಾರ, ಮಲೆ ಮಂಗಟ್ಟೆ ಪಕ್ಷಿಗಳ ನಿನಾದ ಕೇಳುತ್ತದೆ.",
@@ -33,7 +33,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "wayanad-wildlife-sanctuary-tourism-entry-fee-timings-holidays-reviews-header-1.jpg",
     alt: "Wayanad Wildlife Sanctuary Tholpetty Safari Point",
     heading: "ವೈನಾಡು ವನ್ಯಜೀವಿಧಾಮ",
     body: "ವೈನಾಡು ವನ್ಯಧಾಮವು ಸಮೃದ್ಧ ಹಸಿರು ರಾಶಿ ಹಾಗೂ ವನ್ಯಜೀವಿಗಳಿಂದ ಕೂಡಿದೆ. ಈ ವನ್ಯಧಾಮವು ಹಲವಾರು ಅಪರೂಪದ ಮತ್ತು ಅಳಿವಿನಂಚಿನಲ್ಲಿರುವ ಸಸ್ಯ ಹಾಗೂ ಪ್ರಾಣಿ ಪ್ರಭೇದಗಳಿಗೆ ಆಶ್ರಯ ತಾಣವಾಗಿದೆ.",
@@ -41,7 +41,7 @@ export const exploreData = [
   },
   {
     gridPosition: "left",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "Kabini-1.jpg",
     alt: "Kabini Dam",
     heading: "ಕಬಿನಿ ಅಣೆಕಟ್ಟು",
     body: "ಕಬಿನಿ ಅಣೆಕಟ್ಟನ್ನು ಮೈಸೂರು ಜಿಲ್ಲೆಯಲ್ಲಿ ಕಾವೇರಿ ನದಿಗೆ ಅಡ್ಡಲಾಗಿ ನಿರ್ಮಿಸಲಾಗಿದೆ. ಈ ಅಣೆಕಟ್ಟು 696 ಮೀ ಉದ್ದವಾಗಿದ್ದು 1974ರಲ್ಲಿ ಕಟ್ಟಲಾಗಿದೆ. 55 ಎಕರೆ ವಿಶಾಲವಾದ ಜಲಾನಯನ ಪ್ರದೇಶ ಹೊಂದಿರುವ ಕಬಿನಿ ಅಣೆಕಟ್ಟು ಕಾಡು, ನದಿ, ಕೆರೆ ಮತ್ತು ಗಿರಿಶ್ರೇಣಿಗಳನ್ನು ಆವರಿಸಿಕೊಂಡಿದೆ.",
@@ -49,7 +49,7 @@ export const exploreData = [
   },
   {
     gridPosition: "right",
-    img: "iruppu-falls-1-2048x880.jpg",
+    img: "chikka-betta-2.jpg",
     alt: "Chikkadevammana Betta",
     heading: "ಚಿಕ್ಕದೇವಮ್ಮನ ಬೆಟ್ಟ",
     body: "ಪವಿತ್ರವಾದ ಚಿಕ್ಕದೇವಮ್ಮ ಬೆಟ್ಟವು ಕರ್ನಾಟಕ ರಾಜ್ಯದ ಮೈಸೂರು ಜಿಲ್ಲೆಯ ಕುಂದೂರು ಗ್ರಾಮದಲ್ಲಿದೆ. ಬೆಟ್ಟದ ತಪ್ಪಲಿನಲ್ಲಿ ಚಿಕ್ಕದೇವಮ್ಮನ ದೇವಾಲಯವಿದೆ. ಈ ಬೆಟ್ಟವು ಕಾಡಿನಿಂದ ಸುತ್ತುವರಿದಿರುವುದರಿಂದ ಆನೆ, ಚಿರತೆ, ಜಿಂಕೆ ಮತ್ತು ಹಲವಾರು ಕಾಡು ಪ್ರಾಣಿಗಳು ಕಾಣಸಿಗುತ್ತವೆ",

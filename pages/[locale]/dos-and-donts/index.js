@@ -6,9 +6,9 @@ import { useTranslation } from "next-i18next";
 export default function DoandDonts() {
   const { t } = useTranslation("dos-and-donts");
   let slides = [
-    { img: "DSC2472.jpg" },
-    { img: "DSC2948.jpg" },
-    { img: "Mask-Group-2.jpg" },
+    { img: "Mask-Group-35@2x-1.png" },
+    { img: "DSC0471.jpeg" },
+    { img: "Mask-Group-43@2x-2.png" },
   ];
   const liStyle = {
     style:

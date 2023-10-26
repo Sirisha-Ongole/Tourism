@@ -26,7 +26,7 @@ export default function Carousel({ slideimages,  autoSlide = false, autoSlideInt
     return (
         <>
         <div className="lg:max-width-[1519px] lg:h-[600px] h-[350px] w-full m-auto relative group"> 
-            <div style={{backgroundImage: `url(/images/${slideimages[currentSlide].img})`}}className="w-full h-full bg-center bg-contain duration-500 md:bg-cover lg:bg-fit bg-no-repeat"></div>
+            <div style={{backgroundImage: `url(/images/${slideimages[currentSlide].img})`}}className="w-full h-full bg-center bg-cover duration-500 md:bg-fit lg:bg-fit bg-no-repeat"></div>
                 {/* Left Arrow*/}
                 {/* <div className='absolute top-[50%] -traslate-x-0 traslate-y-[50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
                 <FaArrowLeft onClick={prevSlide}size={10} />

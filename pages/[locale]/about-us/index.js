@@ -14,7 +14,7 @@ const AboutUs = () => {
   let slides = [
     { img: "DSC2472.jpg" },
     { img: "DSC2948.jpg" },
-    { img: "Mask-Group-2.jpg" },
+    { img: "DS.jpeg" },
   ];
 
   const biodiversityData = [
@@ -47,20 +47,20 @@ const AboutUs = () => {
 
   const otherAttractions = [
     {
-      image: "Mask-Group-44@2x-768x484.png",
+      image: "iruppu-falls-1536x864.jpg",
       title: t("text27"),
       text: t("text28"),
       link: { name: t("text29") },
     },
     {
       title: t("text30"),
-      image: "Mask-Group-113.png",
+      image: "IMG_20180430_150032358_HDR-scaled copy.jpg",
       text: t("text31"),
       link: { name: t("text32") },
     },
     {
       title: t("text33"),
-      image: "Mask-Group-100.png",
+      image: "vishnu-1-1536x857.jpg",
       text: t("text34"),
       link: { name: t("text35") },
     },
@@ -71,7 +71,7 @@ const AboutUs = () => {
       <Carousel slideimages={slides} autoSlide={true} />
       <SectionTitle text={t("text1")} />
       <div
-        className={`${whitney.className} w-3/4 text-base mx-auto text-center `}
+        className={`${whitney.className} w-4/5 text-base mx-auto text-center `}
       >
         <p className="">
           {t("text2")} <br /> <br /> {t("text3")}
@@ -97,7 +97,7 @@ const AboutUs = () => {
             />
             <p className="lg:text-left text-center">{t("text7")}</p>
             <button
-              className={`${whitneyCondensed.className} bg-black text-white rounded flex lg:ms-0 ms-20 px-6 py-2 mt-8`}
+              className={`${whitneyCondensed.className} bg-black text-white rounded flex lg:mx-0 px-6 py-2 mt-8 mx-auto `}
             >
               {t("text8")}
             </button>
@@ -109,7 +109,9 @@ const AboutUs = () => {
         <SectionTitle text={t("text12")} styles={"mt-2 mb-12"} />
         {biodiversityData.map((item, index) => (
           <div key={index} className="grid lg:grid-cols-4 grid-cols-3 gap-4">
-            <div className="text-2xl lg:col-span-1 col-span-3 font-bold my-auto p-2.5 justify-center">{item.type}</div>
+            <div className="text-2xl lg:col-span-1 col-span-3 font-bold my-auto p-2.5 justify-center">
+              {item.type}
+            </div>
             <div className="col-span-3">
               <div className="grid grid-cols-3 lg:gap-1 gap-7 text-center">
                 {item.subTypes.map((subItem, index) => (
