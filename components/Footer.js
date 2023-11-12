@@ -133,22 +133,22 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-gray-300 pt-10">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-1">
-          <div className="lg:text-left text-center">
+        <div className="grid lg:grid-cols-12 grid-cols-1 gap-1">
+          <div className="lg:col-span-5 col-span-12 lg:text-left text-center">
             © Copyrights 2023. All Rights Reserved <br />
             Nagarahole Tiger Reserve, Karnataka Forest Dept.
           </div>
-          <div className="flex justify-end my-auto col-span-2">
+          <div className="lg:col-span-7 col-span-12 justify-center flex flex-wrap items-center mt-3 text-sm font-medium mx-auto w-full">
             {miscLinks.map((item, index) => (
               <LinkComponent
                 href={item.href}
                 key={item.name}
-                className={`${index != 0 ? "border-l" : ""} border-black px-1`}
+                className={`${index != 0 ? "border-l" : ""} border-gray-500 px-2`}
               >
                 {t(item.name)}
                 {/* <>{index != 0 ? "|":""}</> */}
               </LinkComponent>
-            ))}
+            ))} 
           </div>
         </div>
       </div>

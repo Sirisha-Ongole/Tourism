@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 import Carousel from "../../../components/carousel";
 import { SectionTitle } from "../../../components/SectionTitle";
+import Modal from "../../../components/LightBox/ImgLightBox.js";
 import { whitneyCondensed } from "../../../fonts";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
@@ -21,6 +22,13 @@ export default function Gallery() {
   ];
 
   const { t } = useTranslation("gallery");
+
+  const [showModal, setShowModal] = React.useState(false);
+  const [imgSrc, setImgScr] = React.useState("");
+  const getImage = (imgsrc) => {
+        setImgScr(imgsrc);
+        setShowModal(true);
+  }
 
   return (
     <>
@@ -49,7 +57,7 @@ export default function Gallery() {
               selectedType === "All" || selectedType === item.type
                 ? "block"
                 : "hidden"
-            } h-[150px] w-auto lg:h-[230px] lg:w-auto`}
+            } h-[150px] w-auto lg:h-[230px] lg:w-auto`} onClick={() => getImage(`${item.image}`)}
           >
             <img
               className="w-full h-full object-cover"
@@ -59,17 +67,18 @@ export default function Gallery() {
           </div>
         ))}
       </div>
+      {showModal ? <Modal imgSrc={imgSrc} setShowModal={setShowModal} selectedType={selectedType} images={images} /> : null}
     </>
   );
 }
 
 const images = [
   {
-    image: "Mask-Group-9.png",
+    image: "gallery/T5U6026_HIRES.jpg",
     type: "Carnivores",
   },
   {
-    image: "Mask-Group-7.png",
+    image: "gallery/DSC2472.jpg",
     type: "Carnivores",
   },
   {
@@ -85,7 +94,7 @@ const images = [
     type: "Birds",
   },
   {
-    image: "PM_5226-1-211x300.png",
+    image: "gallery/PM_5226-1.png",
     type: "Birds",
   },
   {
@@ -102,7 +111,7 @@ const images = [
   },
 
   {
-    image: "DSC3308-300x200.jpeg",
+    image: "gallery/DSC3308.jpeg",
     type: "Birds",
   },
   {

@@ -19,7 +19,7 @@ export default function volunter() {
         className={`grid md:grid-cols-12 grid-cols-12 mx-auto w-3/4 py-20 ${whitney.className}`}
       >
         <div className="lg:col-span-4 md:col-span-5 col-span-12">
-          <h4 className=" text-sm lg:text-4xl md:text-xl py-2">
+          <h4 className=" text-sm lg:text-3xl md:text-xl py-2">
             Willing to Volunteer ?
           </h4>
         </div>

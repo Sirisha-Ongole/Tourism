@@ -44,9 +44,9 @@ export default function ProjectReports() {
   return (
     <div>
       <Carousel slideimages={slides} autoSlide={true} />
-      <div className="w-1/2 mx-auto py-3">
-        <div className="grid grid-cols-12 justify-center">
-          <div className="col-span-3 w-full">
+      <div className="lg:w-1/2 w-full mx-auto py-3">
+        <div className="grid grid-cols-12 lg:gap-0 gap-x-4">
+          <div className="col-span-3 lg:w-full">
             <Link
               href="https://online.fliphtml5.com/tuaau/lzgs/"
               target="_blank"
@@ -85,7 +85,7 @@ export default function ProjectReports() {
               rel="noopener noreferrer"
               href="https://drive.google.com/file/d/1eRh2X1HwF8dsiNn5fySTu0McOB3L7fWN/view?usp=sharing"
             >
-              <button className="bg-[#D0AD59] text-white px-5 py-2">
+              <button className="bg-[#D0AD59] text-white px-5 lg:py-2 py-5">
                 CORE
               </button>
             </Link>

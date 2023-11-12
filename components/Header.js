@@ -71,13 +71,13 @@ export default function Header() {
             </LinkComponent>
           ))}
         </Popover.Group>
-        <div className="lg:gap-x-12 ml-24 flex items-center">
+        <div className="lg:gap-x-12 ml-24 flex items-center me-6">
           <LanguageSwitcher
             currentLocale={currentLocale}
             buttonRef={buttonRef}
           />
-          <div className="bg-[#D0AD59] flex h-[98px] rounded m-1 flex-col">
-            <div className="flex-1 text-center text-4xl items-center p-6 ">
+          <div className="bg-[#D0AD59] lg:flex h-[98px] rounded m-1 lg:flex-col hidden lg:visible">
+            <div className="lg:flex-1 text-center text-4xl items-center p-6 ">
               <a
                 href="#"
                 className="text-white uppercase text-lg font-100 leading-6 "
@@ -88,6 +88,16 @@ export default function Header() {
           </div>
         </div>
       </nav>
+      <div className="bg-black grid-cols-1 lg:hidden">
+                <div className="col-span-12 text-center text-4xl items-center p-4">
+                <a
+                href="#"
+                className="text-white uppercase text-lg font-100 "
+              >
+                {t("bookings")}
+              </a>
+                </div>
+        </div>
     </>
   );
 }
