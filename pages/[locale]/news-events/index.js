@@ -4,6 +4,8 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Card } from "../../../components/Card";
 import { getStaticPaths, makeStaticProps } from "../../../lib/getStatic";
 import { useTranslation } from "next-i18next";
+import { FaTwitter } from "react-icons/fa";
+import LinkComponent from "../../../components/Link";
 
 export default function NewsEvents() {
   let slides = [
@@ -54,7 +56,18 @@ export default function NewsEvents() {
     <>
       <Carousel slideimages={slides} autoSlide={true} />
       <SectionTitle text={t("text2")} />
-      <div className="grid lg:grid-cols-3 gap-4 w-3/4 mx-auto my-12">
+      <LinkComponent
+        href="/en/news-events/twitter-feed"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="flex justify-center w-3/4 mx-auto my-12 text-3xl text-center cursor-pointer">
+          <FaTwitter />
+          <span className="mx-4 text-xl">Nagarahole Twitter Feed</span>
+        </div>
+      </LinkComponent>
+
+      <div className="grid lg:grid-cols-3 gap-4 w-3/4 mx-auto my-10">
         {data.map((item, index) => (
           <Card data={item} key={index} />
         ))}
