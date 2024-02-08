@@ -10,7 +10,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>Nagarhole Tiger Reserve</title>
+        <title>Tourisum Tiger Reserve</title>
         <link
           rel="icon"
           href="/images/cropped-NTRlogo-01-32x32.png"

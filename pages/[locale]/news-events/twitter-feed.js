@@ -28,10 +28,10 @@ const TwitterContent = () => {
     <>
       <a
         className="twitter-timeline"
-        href="https://twitter.com/nagaraholetr?ref_src=twsrc%5Etfw"
+        href="https://twitter.com/torisumtr?ref_src=twsrc%5Etfw"
         data-chrome="nofooter noborders"
       >
-        Tweets by Nagarahole
+        Tweets by torisum
       </a>
     </>
   );

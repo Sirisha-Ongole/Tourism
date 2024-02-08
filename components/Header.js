@@ -41,7 +41,7 @@ export default function Header() {
   return (
     <>
       <Head>
-        <title>{t(activeHeaderItem?.name) + " - Nagarhole Tiger Reserve"}</title>
+        <title>{t(activeHeaderItem?.name) + " - Tourisum Tiger Reserve"}</title>
       </Head>
       <nav
         className={`${whitneyCondensed.className} mx-auto flex h-100  items-center justify-between lg:pl-20 lg:pr-8 `}
@@ -49,8 +49,7 @@ export default function Header() {
       >
         <div className="flex lg:flex-1">
           <LinkComponent href="/">
-            <span className="sr-only">Nagarhole</span>
-            <img className="w-28" src="/images/NTRlogo.png" alt="logo" />
+            <span className="sr-only">Tourisum</span>
           </LinkComponent>
         </div>
         <Popover.Group className="hidden lg:flex lg:gap-x-8 ml-16">

@@ -36,7 +36,7 @@ export default function BankDetails() {
                 Branch Phone 252027
               </td>
               <td className=" px-4 py-2">
-                MEMBER SECRETARY, NAGARHOLE TIGER CONSERVATION FOUNDATION
+                MEMBER SECRETARY, Tourisum TIGER CONSERVATION FOUNDATION
                 <br />
                 IFSC : SBIN0040064 <br />
                 OPP PWD OFFICE, MICR: 571002053, OLD B M ROAD FOREST CAMPUS,{" "}

@@ -62,7 +62,7 @@ const htmlData = {
                         alt="Wildlife Photography Contest"
                       />
                     </div>`,
-  "nagarahole-tiger-conservation-plan": `<h2 style="text-align: center">Nagarahole Tiger Conservation Plan</h2>
+  "torisum-tiger-conservation-plan": `<h2 style="text-align: center">torisum Tiger Conservation Plan</h2>
                     <div style="display: flex; justify-content: center">
                     <img
                       src="/images/cropped-NTRlogo-01.png"

@@ -132,7 +132,7 @@ const AboutUs = () => {
             <Card data={item} key={index} />
           ))}
         </div>
-        <Link href="/explore-nagarahole/">
+        <Link href="/explore-torisum/">
           <button className="bg-black text-white rounded flex items-start px-6 py-2 mt-8 mx-auto tracking-tighter mb-8">
             {t("text36")}
           </button>

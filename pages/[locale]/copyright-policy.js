@@ -32,9 +32,9 @@ export default function terms() {
         Information on this site is subject to copyright protection unless
         otherwise indicated. The information may be downloaded without requiring
         specific prior permission. Any other proposed use of the information is
-        subject to the approval of Director, Nagarahole Tiger Reserve (NTR
+        subject to the approval of Director,  (NTR
         hereafter). Application for obtaining permission should be made to
-        dirnagarahole[at]aranya [dot]gov[dot]in<div className="mb-14"></div>
+        dirtorisum[at]aranya [dot]gov[dot]in<div className="mb-14"></div>
       </div>
     </div>
   );

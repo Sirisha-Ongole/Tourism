@@ -39,13 +39,13 @@ export default function Home() {
           {t("text0")}
         </p>
         <button
-          href="https://tickets.nagaraholetigerreserve.com/"
+          href="https://tickets.torisumtigerreserve.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex justify-center items-center bg-black text-white rounded px-6 py-2 mx-auto mb-8 font-thin uppercase"
         >
           <Link
-            href="https://tickets.nagaraholetigerreserve.com/"
+            href="https://tickets.torisumtigerreserve.com/"
             target="_blank"
             rel="noopener noreferrer"
           >

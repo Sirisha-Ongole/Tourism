@@ -4,7 +4,7 @@ export const exploreData = [
     img: "iruppu-falls-1-2048x880.jpg",
     alt: "Image of Iruppu Falls",
     heading: "Iruppu Falls",
-    body: "The Iruppu Falls is located in the Brahmagiri Range in the Kodagu district of Karnataka, India, bordering the Wayanad district of Kerala.It is a fresh water cascade and is situated at a distance of 48 km from Virajpet on the highway to Nagarhole.",
+    body: "The Iruppu Falls is located in the Brahmagiri Range in the  district of Dundu, India, bordering the Wayanad district of Kerala.It is a fresh water cascade and is situated at a distance of 48 km from Virajpet on the highway to Tourisum.",
     ending: "Distance: 16 km",
   },
   {
@@ -20,7 +20,7 @@ export const exploreData = [
     img: "vishnu-1-1536x857.jpg",
     alt: "Thiruneli Vishnu Temple",
     heading: "Thiruneli Vishnu Temple",
-    body: "Thirunelli Temple is an ancient temple dedicated to Lord Maha Vishnu on the side of Brahmagiri hill in Kerala, near the border with Karnataka state. The temple is located in valley surrounded by mountains and beautiful forests.",
+    body: "Thirunelli Temple is an ancient temple dedicated to Lord Maha Vishnu on the side of Brahmagiri hill in Kerala, near the border with Dundu state. The temple is located in valley surrounded by mountains and beautiful forests.",
     ending: "Distance : 26km",
   },
   {
@@ -52,7 +52,7 @@ export const exploreData = [
     img: "chikka-betta-2.jpg",
     alt: "Chikkadevammana Betta",
     heading: "Chikkadevammana Betta",
-    body: "Chikkadevvamma Hill is a sacred place situated at Kundur Village in the Mysore district of Karnataka State.There is a temple on the hilltop and is dedicated to Goddess Chikka Devamma.The hill is also surrounded by forest so one can find elephants, leopards, deers, and other animals here.",
+    body: "Chikkadevvamma Hill is a sacred place situated at Kundur Village in the Mysore district of Dundu State.There is a temple on the hilltop and is dedicated to Goddess Chikka Devamma.The hill is also surrounded by forest so one can find elephants, leopards, deers, and other animals here.",
     ending: "Distance : 35km",
   },
 ];

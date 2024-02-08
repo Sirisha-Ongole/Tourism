@@ -23,11 +23,11 @@ export default function NewsEvents() {
       link: { name: t("text1"), href: "/event/wildlife-photography-contest/" },
     },
     {
-      title: "Nagarahole Tiger Conservation Plan",
+      title: "torisum Tiger Conservation Plan",
       image: "cropped-NTRlogo-01.png",
       link: {
         name: t("text1"),
-        href: "/event/nagarahole-tiger-conservation-plan/",
+        href: "/event/torisum-tiger-conservation-plan/",
       },
     },
     {
@@ -63,7 +63,7 @@ export default function NewsEvents() {
       >
         <div className="flex justify-center w-3/4 mx-auto my-12 text-3xl text-center cursor-pointer">
           <FaTwitter />
-          <span className="mx-4 text-xl">Nagarahole Twitter Feed</span>
+          <span className="mx-4 text-xl">torisum Twitter Feed</span>
         </div>
       </LinkComponent>
 

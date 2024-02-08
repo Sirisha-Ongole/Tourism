@@ -21,7 +21,6 @@ export default function Footer() {
       <div className="grid md:grid-cols-12 grid-cols-1 gap-7 mt-6 mb-6">
         <div className="lg:col-span-3 col-span-12">
           <LinkComponent href="/">
-            <img src="/images/NTRlogo.png" alt="logo" className="w-auto h-28" />
           </LinkComponent>
           <p className="mt-6 mb-6 text-gray-900">
             {t("text3")}
@@ -36,8 +35,8 @@ export default function Footer() {
             <br />
             Email –{" "}
             <span>
-              <a href="mailto:dirnagarahole@aranya.gov.in">
-                dirnagarahole@aranya.gov.in
+              <a href="mailto:abc@gov.in">
+                abc@gov.in
               </a>
             </span>
           </p>
@@ -94,7 +93,7 @@ export default function Footer() {
           </h5>
           <div className="flex space-x-3 mt-6">
             <a
-              href="https://www.facebook.com/nagaraholetr"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -103,7 +102,7 @@ export default function Footer() {
               </Button>
             </a>
             <a
-              href="https://twitter.com/nagaraholetr?lang=en"
+              href="https://twitter.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -112,7 +111,7 @@ export default function Footer() {
               </Button>
             </a>
             <a
-              href="https://www.instagram.com/nagaraholetr/"
+              href="https://www.instagram.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -121,7 +120,7 @@ export default function Footer() {
               </Button>
             </a>
             <a
-              href="https://www.youtube.com/channel/UC7sl70K3Uh6Yq9tdt5dwJ1A"
+              href="https://www.youtube.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -136,7 +135,7 @@ export default function Footer() {
         <div className="grid lg:grid-cols-12 grid-cols-1 gap-1">
           <div className="lg:col-span-5 col-span-12 lg:text-left text-center">
             © Copyrights 2023. All Rights Reserved <br />
-            Nagarahole Tiger Reserve, Karnataka Forest Dept.
+            , Dundu Forest Dept.
           </div>
           <div className="lg:col-span-7 col-span-12 justify-center flex flex-wrap items-center mt-3 text-sm font-medium mx-auto w-full">
             {miscLinks.map((item, index) => (
@@ -193,7 +192,7 @@ const otherLinks = [
   },
   {
     name: "explore",
-    href: "/explore-nagarahole",
+    href: "/explore-torisum",
   },
   {
     name: "dosDonts",

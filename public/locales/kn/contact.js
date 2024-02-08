@@ -10,7 +10,7 @@ export const contactData = [
         "ಹುಣಸೂರು",
       ],
       phone: "08222-252041",
-      email: "dirnagarahole@aranya.gov.in",
+      email: "abc@gov.in",
     },
     contacts: [
       {
@@ -27,7 +27,7 @@ export const contactData = [
           "ನಾಗರಹೊಳೆ",
           "ವಿರಾಜಪೇಟೆ ತಾಲ್ಲೂಕು",
         ],
-        email: "acfnagarahole@gmail.com",
+        email: "acftorisum@gmail.com",
       },
       {
         name: "ಶ್ರೀ ರಂಗಸ್ವಾಮಿ ಕೆ ಎನ್",
@@ -56,7 +56,7 @@ export const contactData = [
         name: "ಶ್ರೀ ಮುಹಮ್ಮದ್‌ ಜೀಷಾನ್",
         designation: "ವಲಯ ಅರಣ್ಯಾಧಿಕಾರಿಗಳು ನಾಗರಹೊಳೆ",
         location: ["ವನ್ಯಜೀವಿ ವಲಯ", "ನಾಗರಹೊಳೆ", "ವಿರಾಜಪೇಟೆ ತಾಲ್ಲೂಕು"],
-        email: "rfonagarahole@gmail.com",
+        email: "rfotorisum@gmail.com",
       },
       {
         name: "ಶ್ರೀ ರತನ್‌ ಕುಮಾರ್‌ ಎಂ ಎ",

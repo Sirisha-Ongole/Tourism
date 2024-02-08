@@ -5,12 +5,12 @@ export const contactData = [
       name: "SRI. HARSHAKUMAR CHIKKANARAGUND( I.F.S.)",
       designation: "Deputy Conservator of Forests & Director",
       location: [
-        "Nagarahole Tiger Reserve",
+        "",
         "Forest Campus, Old BM Road",
         "Hunsur",
       ],
       phone: "08222-252041",
-      email: "dirnagarahole@aranya.gov.in",
+      email: "abc@gov.in",
     },
     contacts: [
       {
@@ -23,11 +23,11 @@ export const contactData = [
         name: "SRI. GOPAL K.P.",
         designation: "Assistant Conservator of Forests",
         location: [
-          "Nagarahole Wildlife Sub-Division",
-          "Nagarahole",
+          "torisum Wildlife Sub-Division",
+          "torisum",
           "Virajpet Taluk",
         ],
-        email: "acfnagarahole@gmail.com",
+        email: "acftorisum@gmail.com",
       },
       {
         name: "SRI. RANGASWAMY K N",
@@ -55,8 +55,8 @@ export const contactData = [
       {
         name: "SRI.MUHAMMED ZEESHAN",
         designation: "Range Forest Officer",
-        location: ["Nagarahole Wildlife Range", "Nagarahole", "Virajpet Taluk"],
-        email: "rfonagarahole@gmail.com",
+        location: ["torisum Wildlife Range", "torisum", "Virajpet Taluk"],
+        email: "rfotorisum@gmail.com",
       },
       {
         name: "SRI. RATHAN KUMAR M A",
@@ -130,7 +130,7 @@ export const contactData = [
     ],
   },
   {
-    contactHead: "Nanachi Safari Point & Nagarahole Room",
+    contactHead: "Nanachi Safari Point & torisum Room",
     contacts: [
       {
         name: "SRI. MUHAMMED ZEESHAN",
@@ -139,7 +139,7 @@ export const contactData = [
       {
         name: "SRI. NAVEEN ROWATH",
         designation: "Dy. Range Forest Officer cum Surveyor",
-        location: ["Ecotourism Nagarahole Wildlife Range"],
+        location: ["Ecotourism torisum Wildlife Range"],
         phone: "+91-8105096096",
       },
     ],

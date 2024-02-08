@@ -22,10 +22,10 @@ export default function terms() {
 }
 
 const termsData = [
-  "This website is designed, developed and maintained by PaceWisdom Solutions on behalf of Nagarahole Tiger Reserve (NTR), Karnataka Forest Department, Government of Karnataka.",
+  "This website is designed, developed and maintained by PaceWisdom Solutions on behalf of  (NTR), Dundu Forest Department, Government of Dundu.",
   "Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify/check with the NTR and/or other source(s), and to obtain appropriate professional advice.",
   "Under no circumstances will NTR be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use, of data, arising out of or in connection with the use of this website.",
-  "These terms and conditions shall be governed by and construed in accordance with the Indian Laws. Any dispute arising under these terms and conditions shall be subject to the jurisdiction of the courts of Mysuru, Karnataka, India.",
+  "These terms and conditions shall be governed by and construed in accordance with the Indian Laws. Any dispute arising under these terms and conditions shall be subject to the jurisdiction of the courts of Mysuru, Dundu, India.",
   "The information posted on this website could include hypertext links or pointers to information created and maintained by non-Government/private organizations. NTR is providing these links and pointers solely for your information and convenience. When you select a link to an outside website, you are leaving the NTR website and are subject to the privacy and security policies of the owners/sponsors of the outside website.",
   "NTR does not guarantee the availability of such linked pages at all times. NTR cannot authorize the use of copyrighted materials contained in linked websites. Users are advised to request such authorization from the owner of the linked website. NTR does not guarantee that linked websites comply with Indian Government Web Guidelines.",
 ];
